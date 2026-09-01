@@ -1,5 +1,8 @@
 //! A greeting, and nothing else.
 
+mod session;
+pub use session::Session;
+
 /// Build a greeting for `name`, ignoring stray whitespace.
 #[must_use]
 pub fn greet(name: &str) -> String {
