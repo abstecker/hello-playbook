@@ -1,5 +1,11 @@
 .DEFAULT_GOAL := ayce
 
+help:
+	@echo "ayce   run the whole gate"
+	@echo "build  compile the workspace"
+	@echo "help   this list"
+
+.PHONY: help
 
 GATE := build
 
