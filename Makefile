@@ -7,7 +7,7 @@ help:
 
 .PHONY: help
 
-GATE := build fmt lint
+GATE := build fmt lint test audit
 
 build:
 	cargo build --workspace
@@ -18,7 +18,13 @@ fmt:
 lint:
 	cargo clippy --workspace --all-targets -- -D warnings
 
-.PHONY: build fmt lint
+test:
+	cargo test --workspace
+
+audit:
+	./bin/security-scan
+
+.PHONY: build fmt lint test audit
 
 ayce: $(GATE)
 	@echo "ayce — all your code, evaluated"
