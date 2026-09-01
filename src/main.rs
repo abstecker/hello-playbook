@@ -1,3 +1,5 @@
+use hello_playbook::greet;
+
 fn main() {
-    println!("Hello, world!");
+    println!("{}", greet("world"));
 }
