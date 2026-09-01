@@ -14,3 +14,17 @@ unsafe_code = "forbid"
 pedantic = { level = "warn", priority = -1 }
 unwrap_used = "warn"
 expect_used = "warn"
+
+[lib]
+crate-type = ["rlib", "cdylib"]
+
+[features]
+wasm = ["dep:wasm-bindgen", "dep:console_error_panic_hook"]
+
+[dependencies.wasm-bindgen]
+version = "0.2"
+optional = true
+
+[dependencies.console_error_panic_hook]
+version = "0.1"
+optional = true

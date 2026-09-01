@@ -3,13 +3,18 @@
 use crate::greet;
 
 /// A conversation with the greeter.
+#[cfg_attr(feature = "wasm", wasm_bindgen::prelude::wasm_bindgen)]
 #[derive(Debug, Default)]
 pub struct Session;
 
+#[cfg_attr(feature = "wasm", wasm_bindgen::prelude::wasm_bindgen)]
 impl Session {
     /// A new conversation.
+    #[cfg_attr(feature = "wasm", wasm_bindgen::prelude::wasm_bindgen(constructor))]
     #[must_use]
     pub fn new() -> Self {
+        #[cfg(feature = "wasm")]
+        console_error_panic_hook::set_once();
         Self
     }
 

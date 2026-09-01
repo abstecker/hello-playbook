@@ -5,7 +5,13 @@ version = 2
 version = 2
 # Exactly the licences this project actually needs. A longer list is not
 # safer — it is a longer list of things you have stopped checking.
-allow = ["Apache-2.0", "GPL-3.0-or-later", "MIT"]
+# Unicode-3.0: unicode-ident, through wasm-bindgen's macros (chapter 8).
+allow = ["Apache-2.0", "GPL-3.0-or-later", "MIT", "Unicode-3.0"]
 
 [bans]
 multiple-versions = "warn"
+
+# Every feature's dependencies, not only the default build's: an optional
+# dependency is still shipped by whoever turns it on.
+[graph]
+all-features = true
