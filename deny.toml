@@ -1,0 +1,11 @@
+[advisories]
+version = 2
+
+[licenses]
+version = 2
+# Exactly the licences this project actually needs. A longer list is not
+# safer — it is a longer list of things you have stopped checking.
+allow = ["Apache-2.0", "GPL-3.0-or-later", "MIT"]
+
+[bans]
+multiple-versions = "warn"
