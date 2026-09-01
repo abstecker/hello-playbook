@@ -2,6 +2,9 @@
 
 use crate::greet;
 
+/// The longest name the greeter takes, in characters.
+const LONGEST: usize = 40;
+
 /// A conversation with the greeter.
 #[cfg_attr(feature = "wasm", wasm_bindgen::prelude::wasm_bindgen)]
 #[derive(Debug, Default)]
@@ -19,8 +22,17 @@ impl Session {
     }
 
     /// Answer one line: greet the name on it, or the world if it is blank.
+    ///
+    /// # Panics
+    ///
+    /// If the name is longer than [`LONGEST`] characters.
     pub fn eval(&mut self, line: &str) -> String {
         let name = line.trim();
+        let length = name.chars().count();
+        assert!(
+            length <= LONGEST,
+            "a name of {length} characters is longer than the {LONGEST} this greeter takes"
+        );
         greet(if name.is_empty() { "world" } else { name })
     }
 }
@@ -37,5 +49,11 @@ mod tests {
     #[test]
     fn a_blank_line_greets_the_world() {
         assert_eq!(Session::new().eval("  "), "Hello, world!");
+    }
+
+    #[test]
+    #[should_panic(expected = "longer than the 40")]
+    fn a_long_name_panics() {
+        Session::new().eval(&"a".repeat(41));
     }
 }
