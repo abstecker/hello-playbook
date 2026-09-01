@@ -1,9 +1,9 @@
 //! A greeting, and nothing else.
 
-/// Build a greeting for `name`, ignoring stray whitespace.
+/// Build a greeting for `name`, ignoring stray whitespace — loudly.
 #[must_use]
 pub fn greet(name: &str) -> String {
-    format!("Hello, {}!", name.trim())
+    format!("HELLO, {}!", name.trim().to_uppercase())
 }
 
 #[cfg(test)]
