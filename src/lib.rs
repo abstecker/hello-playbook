@@ -14,4 +14,9 @@ mod tests {
     fn greet_uses_the_name() {
         assert_eq!(greet("world"), "Hello, world!");
     }
+
+    #[test]
+    fn greet_ignores_stray_whitespace() {
+        assert_eq!(greet("  world  "), "Hello, world!");
+    }
 }
