@@ -14,7 +14,7 @@ pub fn greet_all(names: &[&str]) -> Vec<String> {
 
 #[cfg(test)]
 mod tests {
-    use super::greet;
+    use super::{greet, greet_all};
 
     #[test]
     fn greet_uses_the_name() {
@@ -24,5 +24,10 @@ mod tests {
     #[test]
     fn greet_ignores_stray_whitespace() {
         assert_eq!(greet("  world  "), "Hello, world!");
+    }
+
+    #[test]
+    fn greet_all_keeps_the_order() {
+        assert_eq!(greet_all(&["a", "b"]), ["Hello, a!", "Hello, b!"]);
     }
 }
