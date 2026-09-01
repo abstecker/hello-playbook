@@ -1,0 +1,3 @@
+# Only max_width is set. Everything else is rustfmt's default on purpose —
+# a config file full of overrides is a config file nobody can read.
+max_width = 100
