@@ -1,5 +1,7 @@
 //! A greeting, and nothing else.
 
+pub mod scratch;
+
 /// Build a greeting for `name`, ignoring stray whitespace.
 #[must_use]
 pub fn greet(name: &str) -> String {
