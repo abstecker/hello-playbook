@@ -6,6 +6,12 @@ pub fn greet(name: &str) -> String {
     format!("Hello, {}!", name.trim())
 }
 
+/// One greeting per name, in order.
+#[must_use]
+pub fn greet_all(names: &[&str]) -> Vec<String> {
+    names.iter().copied().map(greet).collect()
+}
+
 #[cfg(test)]
 mod tests {
     use super::greet;
