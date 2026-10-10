@@ -1,0 +1,392 @@
+<!DOCTYPE HTML>
+<html lang="en" class="ayu sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Appendix: figures - Hello, Playbook</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="A Rust project foundation, taught as a book that builds its own repository.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/step-meta.css">
+        <link rel="stylesheet" href="theme/figures.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "ayu";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Hello, Playbook</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="appendix-figures"><a class="header" href="#appendix-figures">Appendix: figures</a></h1>
+<p>This appendix is a test bench. It draws the same two pictures several ways,
+so that every build of this book — the web page, the epub, the PDF — shows
+whether each way still works.</p>
+<p>The two pictures are:</p>
+<ul>
+<li><strong>The gate</strong> — <code>make ayce</code> and what it depends on, at chapter 2, chapter 3,
+and chapter 5. The list grows as the book does.</li>
+<li><strong>A hand-range grid</strong> — thirteen by thirteen poker starting hands, shaded by
+how often a player on the button opens them, or the big blind defends. It
+is not about Rust. It is here because it is the kind of figure the poker
+books need, and a grid is a harder test than a graph.</li>
+</ul>
+<p>On the web page a figure can respond: hover or tab to a box for its detail,
+press a chip to change the state. In the epub and the PDF every figure is a
+still picture. If a figure ever goes missing from one of them, that is this
+appendix doing its job.</p>
+<p>Each section ends with a scorecard row. The criteria are listed at the end.
+The full write-up, and the reasoning behind the choice of method, is
+<code>docs/EPIC-18_SPIKE_Figures.md</code> in the bower repository.</p>
+<h2 id="m3--the-picture-is-the-figure"><a class="header" href="#m3--the-picture-is-the-figure">M3 — the picture is the figure</a></h2>
+<p>The figure is an SVG file, drawn once and kept in the book. On the web page a
+small script swaps the picture for the same SVG inline and makes it respond;
+everywhere else, the picture is all there is.</p>
+<p><img src="figures/m3/gate-ch02.svg" alt="The gate at chapter 2: ayce depends on build" /></p>
+<p><img src="figures/m3/grid-btn.svg" alt="Hand range grid, BTN open" /></p>
+<p>On paper this section shows chapter 2 and the button's range; the other
+states are one chip away on the web page, and listed in full under M7.</p>
+<p>What paper kept, from the probe run on every M3 file (the chapter 5 gate
+shown; the others match):</p>
+<div class="table-wrapper"><table><thead><tr><th>feature</th><th>in the SVG</th><th>on paper</th></tr></thead><tbody>
+<tr><td>rounded corners</td><td>yes</td><td>kept</td></tr>
+<tr><td>centred text</td><td>yes</td><td>kept</td></tr>
+<tr><td>named font</td><td>yes</td><td>kept</td></tr>
+<tr><td>data attributes</td><td>yes</td><td>inert</td></tr>
+<tr><td>classes</td><td>yes</td><td>ignored — but every colour is also written on the shape itself, so nothing was lost</td></tr>
+<tr><td>tooltips, inline styles, CSS variables, HTML inside SVG, transparency, hidden layers</td><td>no</td><td>—</td></tr>
+</tbody></table>
+</div>
+<p>Read in a browser, the script fetches each picture from the book's own
+server. Opened straight from disk (<code>file://</code>), the browser refuses that fetch
+and the page keeps the plain pictures: still correct, just still.</p>
+<div class="table-wrapper"><table><thead><tr><th>bytes</th><th>other sites</th><th>new tools</th><th>script off</th><th>one source</th><th>paper</th><th>numbers</th><th>hover · step · chips</th><th>theme</th><th>keyboard</th><th>this book</th><th>one more state</th></tr></thead><tbody>
+<tr><td>51 KB on load (both figures' first state + 6.6 KB script and style); 99 KB with every state</td><td>none; from disk, interaction is lost, pictures stay</td><td>none</td><td>the pictures</td><td>one file per state</td><td>everything</td><td>typed</td><td>yes · yes · yes</td><td>inline yes; as a picture no</td><td>yes, but one stop per cell: 171 for this section, 717 for the page with every grid on it, a long way to Tab past</td><td>yes</td><td>16 lines: a new file, plus every existing state's list of states; the work is the layout arithmetic</td></tr>
+</tbody></table>
+</div>
+<h2 id="m4--no-script-at-all"><a class="header" href="#m4--no-script-at-all">M4 — no script at all</a></h2>
+<p>The same SVG, with a tooltip on every box and a hover rule written inside the
+file, and no script anywhere. The plan was to embed it with <code>&lt;object&gt;</code>, which
+runs an SVG's own styles and tooltips, and keep a plain picture for paper.</p>
+<p>That embed did not survive the epub. pandoc kept the <code>&lt;object&gt;</code> tag but
+packed only the plain picture's file, so the epub carried a frame pointing at
+a file that is not in the book, beside the picture. The PDF got its picture
+and the web page got the <code>&lt;object&gt;</code> with the picture hidden; the epub was not
+right. So this section uses a plain picture, and its
+hover is lost: an SVG shown as a picture runs none of its own styles and
+shows none of its tooltips. Fixing that needs bower to write a different
+embed for each target — recorded for the Figures EPIC.</p>
+<p><img src="figures/m4/gate-ch05.svg" alt="The gate at chapter 5: ayce depends on build, fmt, lint, test, audit" /></p>
+<p><img src="figures/m4/grid-bb.svg" alt="Hand range grid, BB defend" /></p>
+<p>On paper the tooltips and the hover rule are simply ignored; the picture is
+the same as M3's.</p>
+<div class="table-wrapper"><table><thead><tr><th>bytes</th><th>other sites</th><th>new tools</th><th>script off</th><th>one source</th><th>paper</th><th>numbers</th><th>hover · step · chips</th><th>theme</th><th>keyboard</th><th>this book</th><th>one more state</th></tr></thead><tbody>
+<tr><td>55 KB for the two figures shown; no script</td><td>none</td><td>node, to write the tooltips in at build time</td><td>the same pictures — there is no script</td><td>generated from M3's files</td><td>everything; tooltips and hover style ignored</td><td>typed</td><td>no · no · no as a picture (hover only, with a per-target embed)</td><td>no</td><td>no — a picture has nothing to focus</td><td>yes</td><td>none beyond M3's: it is derived from them</td></tr>
+</tbody></table>
+</div>
+<h2 id="m7--drawn-by-rust-on-paper-and-in-the-browser"><a class="header" href="#m7--drawn-by-rust-on-paper-and-in-the-browser">M7 — drawn by Rust, on paper and in the browser</a></h2>
+<p>The picture is drawn by a small Rust crate from the same data the other
+sections use. The build runs it once to write the files paper reads; the web
+page runs the same code, compiled to WebAssembly, every time a chip or a hover
+asks for a new picture. Because one function draws both, the screen and the
+paper cannot disagree — a check in the build proves it on every change.</p>
+<p>Every state is listed here, so paper carries all of them:</p>
+<p><img src="figures/m7/gate-ch02.svg" alt="The gate at chapter 2" /></p>
+<p><img src="figures/m7/gate-ch03.svg" alt="The gate at chapter 3" /></p>
+<p><img src="figures/m7/gate-ch05.svg" alt="The gate at chapter 5" /></p>
+<p><img src="figures/m7/grid-btn.svg" alt="Hand range grid, BTN open" /></p>
+<p><img src="figures/m7/grid-bb.svg" alt="Hand range grid, BB defend" /></p>
+<p>The WebAssembly that redraws them is 105 KB — a twentieth of the 2.2 MB a
+whole poker engine compiles to — and the drawings it makes in the browser are
+checked, character for character, against the files paper uses. On paper
+every file matched M3's exactly: they are the same bytes.</p>
+<div class="table-wrapper"><table><thead><tr><th>bytes</th><th>other sites</th><th>new tools</th><th>script off</th><th>one source</th><th>paper</th><th>numbers</th><th>hover · step · chips</th><th>theme</th><th>keyboard</th><th>this book</th><th>one more state</th></tr></thead><tbody>
+<tr><td>226 KB for the section, 105 KB of it the WebAssembly</td><td>none; from disk, interaction is lost, pictures stay</td><td>wasm-pack and the wasm target (to build); node (to check)</td><td>the pictures</td><td>one function draws both, checked on every change</td><td>everything</td><td>typed — the engine-backed version is measured off-book</td><td>yes · yes · yes</td><td>inline yes; as a picture no</td><td>yes, and focus survives every redraw; one stop per cell, as M3</td><td>yes</td><td>2 lines of data, no code</td></tr>
+</tbody></table>
+</div>
+<h2 id="m2--a-custom-element"><a class="header" href="#m2--a-custom-element">M2 — a custom element</a></h2>
+<p>A custom HTML element draws the figure with ordinary page boxes, the way the
+design tool's panel did. The same file can also write the figure out as an
+SVG, which is what paper gets — two drawings of one figure, kept in step only
+by being in the same file.</p>
+<p><pk-gate src="figures/data/gate.json" state="ch03"></pk-gate></p>
+<p><img src="figures/m2/gate-ch03.svg" alt="The gate at chapter 3" /></p>
+<p><pk-range-grid src="figures/data/ranges.json" state="bb"></pk-range-grid></p>
+<p><img src="figures/m2/grid-bb.svg" alt="Hand range grid, BB defend" /></p>
+<p>Its SVG output matched M3's files byte for byte — but only because both were
+written to match; nothing ties the boxes on screen to the file on paper. In
+the epub the element is an empty tag a reader ignores, and the picture
+shows once.</p>
+<div class="table-wrapper"><table><thead><tr><th>bytes</th><th>other sites</th><th>new tools</th><th>script off</th><th>one source</th><th>paper</th><th>numbers</th><th>hover · step · chips</th><th>theme</th><th>keyboard</th><th>this book</th><th>one more state</th></tr></thead><tbody>
+<tr><td>65 KB (7 KB element, the two pictures, the data)</td><td>none; from disk, the element stays empty and the pictures show</td><td>node, to write the pictures at build time</td><td>the pictures</td><td>two renderers in one file</td><td>everything</td><td>typed</td><td>yes · yes · yes</td><td>gate yes; grid colours fixed</td><td>yes</td><td>yes</td><td>2 lines of data, no code</td></tr>
+</tbody></table>
+</div>
+<h2 id="m5--a-text-diagram"><a class="header" href="#m5--a-text-diagram">M5 — a text diagram</a></h2>
+<p>The figure is a few lines of text in a diagram language, Mermaid, compiled to
+a picture when the figures are rebuilt. The whole of the chapter 5 gate is
+six lines. It is the least work to write and the least to look at: no hover,
+no chips, the same picture everywhere.</p>
+<p><img src="figures/m5/gate-ch05.svg" alt="The gate at chapter 5, drawn by Mermaid" /></p>
+<p><img src="figures/m5/grid-btn.svg" alt="Hand range grid, BTN open, drawn by Mermaid" /></p>
+<p>Two findings. First, Mermaid's default puts every label inside a piece of
+HTML embedded in the SVG, which the PDF drops: paper got five empty boxes.
+Turning that off (plain SVG text) brought the labels back. Second, the grid
+can be drawn — as a "block" diagram — but its text is 340 lines, one block and
+one colour per hand. Nobody writes that by hand, so the build generates it
+from the same data the other sections use, and the "text diagram" for a grid
+is a generated file like any other.</p>
+<p>Mermaid's pictures also break the rules the other sections' pictures keep:
+they carry ids, transparency and fractional coordinates, and none of the
+data attributes a script needs, so nothing could ever make them respond.</p>
+<div class="table-wrapper"><table><thead><tr><th>bytes</th><th>other sites</th><th>new tools</th><th>script off</th><th>one source</th><th>paper</th><th>numbers</th><th>hover · step · chips</th><th>theme</th><th>keyboard</th><th>this book</th><th>one more state</th></tr></thead><tbody>
+<tr><td>131 KB for the two pictures shown; the grid alone is 116 KB, almost three times M3's</td><td>none</td><td>mmdc, which brings its own Chromium; node</td><td>the pictures</td><td>one text file per gate state; the grid's text is generated</td><td>everything, once labels are plain text; nothing but boxes with Mermaid's default</td><td>typed</td><td>no · no · no</td><td>no</td><td>no</td><td>yes</td><td>7 lines: copy the chapter 5 file, add one</td></tr>
+</tbody></table>
+</div>
+<h2 id="not-carried-m1-and-m6"><a class="header" href="#not-carried-m1-and-m6">Not carried: M1 and M6</a></h2>
+<p><strong>M1 — the design tool's export, as is.</strong> Dropped into the page as a frame,
+it works — until the reader is offline. It fetches React and its fonts from
+other sites every time it is opened, and paper gets a screenshot that nothing
+keeps in step with the page.</p>
+<div class="table-wrapper"><table><thead><tr><th>bytes</th><th>other sites</th><th>new tools</th><th>script off</th><th>one source</th><th>paper</th><th>numbers</th><th>hover · step · chips</th><th>theme</th><th>keyboard</th><th>this book</th><th>one more state</th></tr></thead><tbody>
+<tr><td>112 KB in the book, plus 248 KB from other sites on every open</td><td>unpkg (React), Google Fonts; offline, an empty frame</td><td>none to show it; a browser driver for the screenshot</td><td>the layout with its template text showing</td><td>one export, made in the design tool</td><td>a screenshot, kept everywhere, a millimetre-high label on a PDF page, and out of date the day the export changes</td><td>typed</td><td>yes · yes · yes, inside the frame</td><td>its own four, not the book's</td><td>buttons yes, cells no</td><td>cannot: reads from other sites at read time</td><td>none to add: the library has no gate</td></tr>
+</tbody></table>
+</div>
+<p><strong>M6 — a poker engine in the page.</strong> The hand counts on the grid could come
+from a real poker library compiled to WebAssembly, instead of being typed in.
+It works, and it costs 275 KB per page against 105 KB for drawing alone. This
+book teaches a Rust foundation, not poker, so it carries no engine.</p>
+<p>It also turned out to be wrong: the engine counts no combinations at all for
+four-deuce, suited or not. Nothing in the picture showed it. A test comparing
+the engine's numbers with the typed ones did, and the typed ones were right.</p>
+<div class="table-wrapper"><table><thead><tr><th>bytes</th><th>other sites</th><th>new tools</th><th>script off</th><th>one source</th><th>paper</th><th>numbers</th><th>hover · step · chips</th><th>theme</th><th>keyboard</th><th>this book</th><th>one more state</th></tr></thead><tbody>
+<tr><td>286 KB, 275 KB of it WebAssembly; the engine alone adds 169 KB</td><td>none; from a file, nothing</td><td>wasm-pack, the wasm target, the engine</td><td>nothing: script draws the whole grid</td><td>two renderers: script for the screen, Rust for paper</td><td>none of its own</td><td>from the engine — wrong for 2 hands of 169</td><td>tooltip · no · views</td><td>no</td><td>buttons yes, cells no</td><td>cannot: no engine, by rule</td><td>none to add: it draws the grid only</td></tr>
+</tbody></table>
+</div>
+<h2 id="the-scorecard"><a class="header" href="#the-scorecard">The scorecard</a></h2>
+<div class="table-wrapper"><table><thead><tr><th></th><th>C1 bytes</th><th>C2 network</th><th>C3 tools</th><th>C4 script off</th><th>C5 one source</th><th>C6 paper</th><th>C7 truth</th><th>C8 hover/step/chips</th><th>C9 theme</th><th>C10 keyboard</th><th>C11 sample book</th><th>C12 effort</th></tr></thead><tbody>
+<tr><td>M1 iframe (off-book)</td><td>112 KB + 248 KB fetched per open</td><td>unpkg, Google Fonts; offline: empty frame</td><td>none (Playwright for the screenshot)</td><td>template text (<code>{{ … }}</code>)</td><td>one export, from the design tool</td><td>a screenshot: kept, 244 ppi, never in step</td><td>typed</td><td>yes · yes · yes (in frame)</td><td>its own four, not mdBook's</td><td>18 buttons yes, 127 cells no</td><td>cannot (other sites at read time)</td><td>n/a (no gate in the library)</td></tr>
+<tr><td>M2 custom element</td><td>65 KB (7 KB element)</td><td>none (file://: images only)</td><td>node (build only)</td><td>images</td><td>two renderers in one file</td><td>nothing lost</td><td>typed</td><td>yes · yes · yes</td><td>gate yes, grid fixed</td><td>yes</td><td>yes</td><td>2 data lines, 0 code</td></tr>
+<tr><td>M3 SVG + upgrade</td><td>51 KB load / 99 KB all states</td><td>none (file://: static only)</td><td>none</td><td>images</td><td>one file per state</td><td>nothing lost</td><td>typed</td><td>yes · yes · yes</td><td>inline yes, img no</td><td>yes, but one stop per cell: 171 here, 717 Tab stops on the whole page</td><td>yes</td><td>16 lines, layout by hand</td></tr>
+<tr><td>M4 no script</td><td>55 KB, no script</td><td>none</td><td>node (build only)</td><td>same pictures</td><td>generated from M3</td><td>nothing lost (tooltips, style ignored)</td><td>typed</td><td>no · no · no (hover needs a per-target embed)</td><td>no</td><td>no</td><td>yes</td><td>0 beyond M3</td></tr>
+<tr><td>M5 Mermaid</td><td>131 KB (grid 116 KB)</td><td>none</td><td>mmdc (+ its Chromium), node</td><td>images</td><td>one .mmd per gate state; grid text generated; breaks the SVG contract (ids, opacity, no data-node/data-hand)</td><td>nothing lost with plain-text labels; all labels lost by default</td><td>typed</td><td>no · no · no</td><td>no</td><td>no</td><td>yes</td><td>7 lines (1 new)</td></tr>
+<tr><td>M6 wasm + JS draws (off-book)</td><td>286 KB (wasm 275 KB; pkcore adds 169 KB raw / 43 KB gz over M7)</td><td>none (file://: nothing)</td><td>wasm-pack + wasm target; pkcore</td><td>nothing</td><td>two renderers (JS screen, Rust paper)</td><td>none of its own</td><td>engine — wrong on 2/169 (42s, 42o: pkcore 0.15 gap)</td><td>tooltip · no · views</td><td>no</td><td>buttons yes, cells no</td><td>cannot (no engine, by rule)</td><td>n/a (grid only)</td></tr>
+<tr><td>M7 Rust draws SVG</td><td>226 KB section (wasm 105 KB)</td><td>none (file://: static only)</td><td>wasm-pack + wasm target; node to check</td><td>images</td><td>one function, checked (check-m7)</td><td>nothing lost (= M3 bytes)</td><td>typed (pkcore off-book)</td><td>yes · yes · yes</td><td>inline yes, img no</td><td>yes, focus survives redraw; one stop per cell, as M3</td><td>yes</td><td>2 data lines, 0 code</td></tr>
+</tbody></table>
+</div>
+<p><strong>C1</strong> bytes the figure adds to the page · <strong>C2</strong> other sites contacted while
+reading · <strong>C3</strong> tools added to build the book · <strong>C4</strong> what shows with
+JavaScript off · <strong>C5</strong> whether the web and paper pictures can drift ·
+<strong>C6</strong> what paper lost · <strong>C7</strong> whether the numbers are computed or typed ·
+<strong>C8</strong> hover · step · chips · <strong>C9</strong> follows the light/dark theme ·
+<strong>C10</strong> every hover reachable by keyboard · <strong>C11</strong> carried by this book
+without a poker engine · <strong>C12</strong> lines and minutes to add one more state.</p>
+<p>Where a method's answer differs between the gate and the grid, the cell holds
+the worse one and the method's section holds both.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="appendix-credits.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="appendix-credits.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="theme/figures.js"></script>
+        <script src="theme/pk-elements.js"></script>
+
+
+
+    </div>
+    </body>
+</html>

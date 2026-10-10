@@ -1,0 +1,929 @@
+<!DOCTYPE HTML>
+<html lang="en" class="ayu sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Hello, Playbook</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="A Rust project foundation, taught as a book that builds its own repository.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="theme/step-meta.css">
+        <link rel="stylesheet" href="theme/figures.css">
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "ayu";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('ayu')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Hello, Playbook</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="a-repo-that-builds"><a class="header" href="#a-repo-that-builds">A repo that builds</a></h1>
+<p>Every project starts the same way: a manifest that names it, and one file that
+runs. Nothing else has earned its place yet.</p>
+<h2 id="hi-jeffercodians"><a class="header" href="#hi-jeffercodians">Hi Jeffercodians!</a></h2>
+<p><a id="step-cargo-init"></a>
+<span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-001-cargo-init/Cargo.toml" title="View full file">💾 <code>Cargo.toml</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-001-cargo-init/Cargo.toml#L1-L9" title="View source">L1–L9</a> · step 001 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-001-cargo-init" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-001-cargo-init" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-toml">[package]
+name = "hello-playbook"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.95"
+license = "MIT OR Apache-2.0 OR GPL-3.0-or-later"
+
+[dependencies]
+
+# bower:begin lints
+# bower:end lints
+</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-001-cargo-init</code></span></p>
+<p>The two comment lines at the bottom are a <em>region marker</em>. They mark a hole in
+the file that a later chapter will fill, and they are stripped out before the
+file reaches the repository. Chapter 3 fills this one.</p>
+<p><span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-001-cargo-init/src/main.rs" title="View full file">💾 <code>src/main.rs</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-001-cargo-init/src/main.rs#L1-L3" title="View source">L1–L3</a> · step 001 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-001-cargo-init" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-001-cargo-init" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-rust">fn main() {
+    println!("Hello, world!");
+}</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-001-cargo-init</code></span></p>
+<p>Both blocks above carry <code>step="cargo-init"</code>, so they land in one commit. That is
+right: a manifest without a source file is not a state of the project anyone
+would want to check out.</p>
+<h2 id="running-it"><a class="header" href="#running-it">Running it</a></h2>
+<p><a id="step-hello-runs"></a></p>
+<p>This step writes no files. <code>op="none"</code> declares a commit that exists only to
+mark a moment in the narrative — here, the moment you can first run the thing.
+The command is:</p>
+<pre><code class="language-console">$ cargo run
+Hello, world!
+</code></pre>
+<p>That fence has no directive above it, so Bower ignores it. Only fenced blocks
+introduced by a <code>&lt;!-- bower … --&gt;</code> comment become code in the repository.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="the-gate"><a class="header" href="#the-gate">The gate</a></h1>
+<p>One command has to mean "check everything". In these books that command is
+<code>make ayce</code> — <em>all your code, evaluated</em> — and its meaning never varies from
+project to project. What varies is what it depends on, and that list grows as
+the book does.</p>
+<p><a id="step-makefile"></a>
+<span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-003-makefile/Makefile" title="View full file">💾 <code>Makefile</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-003-makefile/Makefile#L1-L14" title="View source">L1–L14</a> · step 003 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-003-makefile" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-003-makefile" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-makefile">.DEFAULT_GOAL := ayce
+
+# bower:begin help
+# bower:end help
+
+# bower:begin gate
+GATE := build
+
+build:
+	cargo build --workspace
+
+.PHONY: build
+# bower:end gate
+
+ayce: $(GATE)
+	@echo "ayce — all your code, evaluated"
+
+.PHONY: ayce
+</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-003-makefile</code></span></p>
+<p>The <code>GATE</code> variable lives <em>inside</em> the region, which is the whole trick. Later
+chapters replace the region wholesale and the <code>ayce</code> target picks up the new
+prerequisites without ever being edited again.</p>
+<p><a id="step-make-help"></a>
+<span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-004-make-help/Makefile" title="View full file">💾 <code>Makefile</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-004-make-help/Makefile#L3-L8" title="View source">L3–L8</a> · step 004 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-004-make-help" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-004-make-help" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-makefile">help:
+	@echo "ayce   run the whole gate"
+	@echo "build  compile the workspace"
+	@echo "help   this list"
+
+.PHONY: help
+</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-004-make-help</code></span></p>
+<p><code>op="region"</code> replaces the text between the two <code>help</code> markers and leaves the
+rest of the file alone. The page shows you five lines; the repository gets the
+whole Makefile. Note that the block does <em>not</em> repeat the marker lines — they
+stay in the file, waiting for the next edit.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="lints-and-format"><a class="header" href="#lints-and-format">Lints and format</a></h1>
+<p>Formatting and linting are not taste. They are the cheapest possible tests: they
+run in a second and they catch a class of mistake before a human ever reads the
+diff. So they belong in the gate, and the gate belongs in one command.</p>
+<h2 id="pin-the-format"><a class="header" href="#pin-the-format">Pin the format</a></h2>
+<p><a id="step-rustfmt"></a>
+<span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-005-rustfmt/rustfmt.toml" title="View full file">💾 <code>rustfmt.toml</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-005-rustfmt/rustfmt.toml#L1-L3" title="View source">L1–L3</a> · step 005 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-005-rustfmt" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-005-rustfmt" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-toml"># Only max_width is set. Everything else is rustfmt's default on purpose —
+# a config file full of overrides is a config file nobody can read.
+max_width = 100
+</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-005-rustfmt</code></span></p>
+<h2 id="pin-the-toolchain"><a class="header" href="#pin-the-toolchain">Pin the toolchain</a></h2>
+<p><a id="step-toolchain"></a>
+<span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-006-toolchain/rust-toolchain.toml" title="View full file">💾 <code>rust-toolchain.toml</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-006-toolchain/rust-toolchain.toml#L1-L3" title="View source">L1–L3</a> · step 006 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-006-toolchain" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-006-toolchain" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-toml">[toolchain]
+channel = "1.95.0"
+components = ["clippy", "rustfmt"]
+</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-006-toolchain</code></span></p>
+<p>Anyone who clones this repository gets that exact compiler, with those exact
+components, without being told to install anything. The version appears again in
+<code>.tool-versions</code> in chapter 6, and the two must always agree.</p>
+<h2 id="fill-the-lints-region"><a class="header" href="#fill-the-lints-region">Fill the lints region</a></h2>
+<p><a id="step-lints"></a>
+<span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-007-lints/Cargo.toml" title="View full file">💾 <code>Cargo.toml</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-007-lints/Cargo.toml#L10-L16" title="View source">L10–L16</a> · step 007 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-007-lints" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-007-lints" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-toml">[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+pedantic = { level = "warn", priority = -1 }
+unwrap_used = "warn"
+expect_used = "warn"
+</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-007-lints</code></span></p>
+<p>This is the hole chapter 1 left open. The <code>priority = -1</code> is not decoration:
+without it, <code>pedantic</code> as a lint <em>group</em> would override the individual lints
+listed after it.</p>
+<h2 id="put-them-in-the-gate"><a class="header" href="#put-them-in-the-gate">Put them in the gate</a></h2>
+<p><a id="step-gate-fmt-clippy"></a>
+<span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-008-gate-fmt-clippy/Makefile" title="View full file">💾 <code>Makefile</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-008-gate-fmt-clippy/Makefile#L10-L21" title="View source">L10–L21</a> · step 008 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-008-gate-fmt-clippy" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-008-gate-fmt-clippy" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-makefile">GATE := build fmt lint
+
+build:
+	cargo build --workspace
+
+fmt:
+	cargo fmt --all --check
+
+lint:
+	cargo clippy --workspace --all-targets -- -D warnings
+
+.PHONY: build fmt lint
+</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-008-gate-fmt-clippy</code></span></p>
+<p><code>--check</code> rather than a plain <code>cargo fmt</code>, and <code>-D warnings</code> rather than a plain
+<code>clippy</code>: a gate that quietly fixes things is not a gate. It must fail.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tests-and-failing-on-purpose"><a class="header" href="#tests-and-failing-on-purpose">Tests, and failing on purpose</a></h1>
+<p>A test that has never failed has never been tested. This chapter writes one that
+fails, commits it in that state, and fixes it in the next commit — so the
+failure is a real, tagged, checkoutable state of the repository rather than
+something that happened off-camera.</p>
+<h2 id="a-library-to-test"><a class="header" href="#a-library-to-test">A library to test</a></h2>
+<p><a id="step-greet-lib"></a>
+<span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-009-greet-lib/src/lib.rs" title="View full file">💾 <code>src/lib.rs</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-009-greet-lib/src/lib.rs#L1-L7" title="View source">L1–L7</a> · step 009 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-009-greet-lib" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-009-greet-lib" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-rust">//! A greeting, and nothing else.
+
+// bower:begin mods
+// bower:end mods
+// bower:begin greet
+/// Build a greeting for `name`.
+#[must_use]
+pub fn greet(name: &amp;str) -&gt; String {
+    format!("Hello, {name}!")
+}
+// bower:end greet</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-009-greet-lib</code></span></p>
+<p>The <code>mods</code> region is empty and has no blank line around it. Its blank line will
+arrive as part of its contents later, so that emptying the region again does not
+leave a double blank line behind — which the formatter, installed in chapter 3,
+would reject.</p>
+<p><span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-009-greet-lib/src/main.rs" title="View full file">💾 <code>src/main.rs</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-009-greet-lib/src/main.rs#L1-L5" title="View source">L1–L5</a> · step 009 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-009-greet-lib" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-009-greet-lib" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-rust">use hello_playbook::greet;
+
+fn main() {
+    println!("{}", greet("world"));
+}</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-009-greet-lib</code></span></p>
+<p><code>op="replace"</code> writes a whole new file over the old one. Both blocks share
+<code>step="greet-lib"</code>, so extracting the function and rewiring the binary are one
+commit — the repository never passes through a state where <code>main.rs</code> refers to
+something that is not there yet.</p>
+<h2 id="a-test-that-passes"><a class="header" href="#a-test-that-passes">A test that passes</a></h2>
+<p><a id="step-greet-test"></a>
+<span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-010-greet-test/src/lib.rs" title="View full file">💾 <code>src/lib.rs</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-010-greet-test/src/lib.rs#L8-L17" title="View source">L8–L17</a> · step 010 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-010-greet-test" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-010-greet-test" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-rust">
+// bower:begin tests
+#[cfg(test)]
+mod tests {
+    use super::greet;
+
+    #[test]
+    fn greet_uses_the_name() {
+        assert_eq!(greet("world"), "Hello, world!");
+    }
+}
+// bower:end tests</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-010-greet-test</code></span></p>
+<p><code>op="append"</code> adds to the bottom of a file without repeating its top. The block
+opens with a blank line, which is how the separating blank line gets there.</p>
+<h2 id="a-test-that-fails"><a class="header" href="#a-test-that-fails">A test that fails</a></h2>
+<p><a id="step-test-that-fails"></a>
+<span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-011-test-that-fails/src/lib.rs" title="View full file">💾 <code>src/lib.rs</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-011-test-that-fails/src/lib.rs#L18-L21" title="View source">L18–L21</a> · step 011 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-011-test-that-fails" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-011-test-that-fails" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-rust"><span class="boring">#[cfg(test)]
+</span><span class="boring">mod tests {
+</span><span class="boring">    use super::greet;
+</span><span class="boring">
+</span><span class="boring">    #[test]
+</span><span class="boring">    fn greet_uses_the_name() {
+</span><span class="boring">        assert_eq!(greet("world"), "Hello, world!");
+</span><span class="boring">    }
+</span><span class="boring">
+</span>    #[test]
+    fn greet_ignores_stray_whitespace() {
+        assert_eq!(greet("  world  "), "Hello, world!");
+    }
+<span class="boring">}</span></code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-011-test-that-fails</code></span></p>
+<div class="step-exercise">
+<p><strong>Your turn: Make the test pass</strong></p>
+<p>Fork <a href="https://github.com/abstecker/hello-playbook/fork">the repository</a>, then:</p>
+<pre><code class="language-console">git clone https://github.com/abstecker/hello-playbook.git   # or your fork
+git checkout step-011-test-that-fails
+cargo test
+</code></pre>
+<p>Green means you did it. The answer is <a href="ch04-tests-and-failing-on-purpose.html#step-test-that-passes">the next step</a>.</p>
+</div>
+<p>Two things are happening here.</p>
+<p><code>expect="test_fail"</code> declares that this commit's tests are <em>supposed</em> to fail.
+That is a promise the toolchain checks: when the replay layer builds this
+repository it runs the tests at this step and treats a pass as the error.</p>
+<p>The <code>bower:show</code> markers decide what you just read. The block above contains the
+whole test module, because the repository needs the whole file — but only the
+new test was printed on the page. The markers never reach the repository.</p>
+<p>The <code>exercise</code> key is the third thing. It marks this step as a place to stop
+reading and start typing: the box under the code above tells you how to fork
+the repository, check out exactly this commit, and run the tests yourself. The
+next section is one answer, and it stays folded until you open it.</p>
+<p>Here is the part of what <code>cargo test</code> prints at this step that matters:</p>
+<p><span class="step-output"><sub>$ cargo test · step 011 of hello-playbook</sub></span></p>
+<pre><code class="language-text">[...]
+thread 'tests::greet_ignores_stray_whitespace' panicked at src/lib.rs:20:9:
+assertion `left == right` failed
+  left: "Hello,   world  !"
+ right: "Hello, world!"
+[...]
+</code></pre>
+<p>That is not a paste. The <code>output="verify"</code> directive above binds the block to
+this step, and <code>bower verify</code> runs the tests and fails the day what they print
+changes. <code>bower verify --record</code> is what filled it in, with the whole output.</p>
+<p>The two <code>[...]</code> lines are a trim, made by hand after recording. Each one stands
+for lines left out, so the quote can skip the test list and the summary and
+keep only the failure. It is still checked: the lines that remain must appear
+in the output, in this order. <code>--record</code> leaves the trim alone for as long as
+that holds, and writes the whole output back the day it does not.</p>
+<h2 id="the-fix"><a class="header" href="#the-fix">The fix</a></h2>
+<p><a id="step-test-that-passes"></a></p>
+<details class="step-answer">
+<summary>Show the answer</summary>
+<p><span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-012-test-that-passes/src/lib.rs" title="View full file">💾 <code>src/lib.rs</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-012-test-that-passes/src/lib.rs#L3-L7" title="View source">L3–L7</a> · step 012 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-012-test-that-passes" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-012-test-that-passes" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-rust">/// Build a greeting for `name`, ignoring stray whitespace.
+#[must_use]
+pub fn greet(name: &amp;str) -&gt; String {
+    format!("Hello, {}!", name.trim())
+}</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-012-test-that-passes</code></span></p>
+</details>
+<p>The fix is in a different region of the same file. That is the point of regions:
+the test module and the function it tests grow independently, and each edit
+shows only itself.</p>
+<h2 id="code-that-does-not-compile"><a class="header" href="#code-that-does-not-compile">Code that does not compile</a></h2>
+<p><a id="step-wont-compile"></a>
+<span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-013-wont-compile/src/scratch.rs" title="View full file">💾 <code>src/scratch.rs</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-013-wont-compile/src/scratch.rs#L1-L6" title="View source">L1–L6</a> · step 013 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-013-wont-compile" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-013-wont-compile" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-rust">// bower:begin scratch
+/// Deliberately wrong: a string literal is not a `u32`.
+#[must_use]
+pub fn answer() -&gt; u32 {
+    let n: u32 = "42";
+    n
+}
+// bower:end scratch</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-013-wont-compile</code></span></p>
+<p><span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-013-wont-compile/src/lib.rs" title="View full file">💾 <code>src/lib.rs</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-013-wont-compile/src/lib.rs#L3-L4" title="View source">L3–L4</a> · step 013 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-013-wont-compile" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-013-wont-compile" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-rust">pub mod scratch;
+</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-013-wont-compile</code></span></p>
+<p>The second block is not decoration. A file that no module declaration points at
+is never compiled, so a <code>compile_fail</code> in an undeclared file would be a lie
+about the toolchain. Declaring the module and writing the broken code are one
+commit, and that commit genuinely does not build.</p>
+<p>Notice the blank line at the end of that block. That is the separator promised
+earlier — it belongs to the region, not to the file around it.</p>
+<p>And here is what the compiler says about it, checked the same way:</p>
+<p><span class="step-output"><sub>$ cargo check · step 013 of hello-playbook · <a href="https://doc.rust-lang.org/error_codes/E0308.html">E0308</a></sub></span></p>
+<pre><code class="language-text">error[E0308]: mismatched types
+ --&gt; src/scratch.rs:4:18
+  |
+4 |     let n: u32 = "42";
+  |            ---   ^^^^ expected `u32`, found `&amp;str`
+  |            |
+  |            expected due to this
+
+For more information about this error, try `rustc --explain E0308`.
+error: could not compile `hello-playbook` (lib) due to 1 previous error
+</code></pre>
+<h2 id="the-repair"><a class="header" href="#the-repair">The repair</a></h2>
+<p><a id="step-scratch-fixed"></a>
+<span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-014-scratch-fixed/src/scratch.rs" title="View full file">💾 <code>src/scratch.rs</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-014-scratch-fixed/src/scratch.rs#L1-L5" title="View source">L1–L5</a> · step 014 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-014-scratch-fixed" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-014-scratch-fixed" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-rust">/// Parse the text, and fall back to zero when it is not a number.
+#[must_use]
+pub fn answer() -&gt; u32 {
+    "42".parse().unwrap_or_default()
+}</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-014-scratch-fixed</code></span></p>
+<p><code>unwrap_or_default</code> rather than <code>unwrap</code>: chapter 3 set <code>unwrap_used = "warn"</code>,
+and the gate turns warnings into failures.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="supply-chain"><a class="header" href="#supply-chain">Supply chain</a></h1>
+<p>Your code is a small fraction of what you ship. The rest arrives from a
+registry, written by people you will never meet, and it changes underneath you.
+Two tools watch it, and one script gives them a single name.</p>
+<h2 id="rules-for-dependencies"><a class="header" href="#rules-for-dependencies">Rules for dependencies</a></h2>
+<p><a id="step-deny-toml"></a>
+<span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-015-deny-toml/deny.toml" title="View full file">💾 <code>deny.toml</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-015-deny-toml/deny.toml#L1-L11" title="View source">L1–L11</a> · step 015 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-015-deny-toml" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-015-deny-toml" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-toml">[advisories]
+version = 2
+
+[licenses]
+version = 2
+# Exactly the licences this project actually needs. A longer list is not
+# safer — it is a longer list of things you have stopped checking.
+allow = ["Apache-2.0", "GPL-3.0-or-later", "MIT"]
+
+[bans]
+multiple-versions = "warn"
+</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-015-deny-toml</code></span></p>
+<h2 id="one-name-for-scan"><a class="header" href="#one-name-for-scan">One name for "scan"</a></h2>
+<p><a id="step-security-scan"></a>
+<span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-016-security-scan/bin/security-scan" title="View full file">💾 <code>bin/security-scan</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-016-security-scan/bin/security-scan#L1-L7" title="View source">L1–L7</a> · step 016 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-016-security-scan" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-016-security-scan" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-bash">#!/usr/bin/env bash
+# One definition of "scan". The Makefile calls this; so does CI. When the
+# scan changes, it changes in one place.
+set -euo pipefail
+
+cargo audit
+cargo deny check advisories bans licenses sources
+</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-016-security-scan</code></span></p>
+<p><code>set -euo pipefail</code> is not boilerplate. Without it a failing <code>cargo audit</code> in
+the middle of the script would be shrugged off and the gate would pass while the
+advisory stood.</p>
+<h2 id="into-the-gate"><a class="header" href="#into-the-gate">Into the gate</a></h2>
+<p><a id="step-gate-test-audit"></a>
+<span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-017-gate-test-audit/Makefile" title="View full file">💾 <code>Makefile</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-017-gate-test-audit/Makefile#L10-L27" title="View source">L10–L27</a> · step 017 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-017-gate-test-audit" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-017-gate-test-audit" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-makefile">GATE := build fmt lint test audit
+
+build:
+	cargo build --workspace
+
+fmt:
+	cargo fmt --all --check
+
+lint:
+	cargo clippy --workspace --all-targets -- -D warnings
+
+test:
+	cargo test --workspace
+
+audit:
+	./bin/security-scan
+
+.PHONY: build fmt lint test audit
+</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-017-gate-test-audit</code></span></p>
+<p>The tests written in chapter 4 join the gate here, alongside the scan. <code>ayce</code>
+itself has not been edited since chapter 2 — it never needs to be, because its
+prerequisite list lives inside the region.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ci"><a class="header" href="#ci">CI</a></h1>
+<p>CI does not need its own idea of what "good" means. It has one job: check out
+the code, install the toolchain, and run the same gate you run locally.</p>
+<h2 id="one-version-declared-once-more"><a class="header" href="#one-version-declared-once-more">One version, declared once more</a></h2>
+<p><a id="step-tool-versions"></a>
+<span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-018-tool-versions/.tool-versions" title="View full file">💾 <code>.tool-versions</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-018-tool-versions/.tool-versions#L1-L1" title="View source">L1–L1</a> · step 018 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-018-tool-versions" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-018-tool-versions" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-text">rust 1.95.0
+</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-018-tool-versions</code></span></p>
+<p>This has to agree with <code>rust-toolchain.toml</code> from chapter 3. Two places that
+name a version are two places that can disagree, so the rule in these books is
+that every version-declaring file is updated together, always.</p>
+<h2 id="the-workflow"><a class="header" href="#the-workflow">The workflow</a></h2>
+<p><a id="step-ci-workflow"></a>
+<span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-019-ci-workflow/.github/workflows/ci.yml" title="View full file">💾 <code>.github/workflows/ci.yml</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-019-ci-workflow/.github/workflows/ci.yml#L12-L18" title="View source">L12–L18</a> · step 019 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-019-ci-workflow" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-019-ci-workflow" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-yaml"># ... 11 lines elided — full file: https://github.com/abstecker/hello-playbook/blob/step-019-ci-workflow/.github/workflows/ci.yml
+      - uses: actions/checkout@v7
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy, rustfmt
+      - uses: taiki-e/install-action@cargo-audit
+      - uses: taiki-e/install-action@cargo-deny
+      - run: make ayce
+</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-019-ci-workflow</code></span></p>
+<p>Two of those references name a version and one names a thing. <code>actions/checkout</code>
+is pinned to a major, resolved when this chapter was written. But
+<code>dtolnay/rust-toolchain@stable</code> and <code>taiki-e/install-action@cargo-audit</code> are not
+versions at all — <code>stable</code> and <code>cargo-audit</code> name what you want, and the action
+resolves it. Those are copied exactly and never "updated".</p>
+<p>The last line is the whole argument. CI runs <code>make ayce</code> and nothing else. There
+is no second list of checks to drift out of step with the first.</p>
+<h2 id="clearing-the-scratch"><a class="header" href="#clearing-the-scratch">Clearing the scratch</a></h2>
+<p><a id="step-drop-scratch"></a></p>
+<p>The broken module did its job in chapter 4 and has no reason to stay. This
+directive has no code block after it — <code>op="delete"</code> names a file and removes
+it, and the paragraph you are reading is what stops the next fence from being
+mistaken for its contents.</p>
+<p>Deleting the file is not enough on its own. <code>src/lib.rs</code> still declares the
+module, and a declaration pointing at nothing does not compile, so the same
+commit empties the <code>mods</code> region:</p>
+<pre><code class="language-rust"></code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-020-drop-scratch</code></span></p>
+<p>That block really is empty. The region returns to the state chapter 4 created it
+in, and the file goes back to having exactly one blank line where the module
+declaration used to be.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="try-it-on-a-branch"><a class="header" href="#try-it-on-a-branch">Try it on a branch</a></h1>
+<p>Every chapter so far has been one straight line of commits. Real work is not.
+You try something, it fails, and you keep the attempt anyway, because the
+failure is the lesson. This chapter tries two things on two branches. One fails
+and stays where it is. The other works, and is merged.</p>
+<h2 id="an-experiment-that-fails"><a class="header" href="#an-experiment-that-fails">An experiment that fails</a></h2>
+<p><a id="step-shout"></a>
+<span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-021-shout/src/lib.rs" title="View full file">💾 <code>src/lib.rs</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-021-shout/src/lib.rs#L3-L7" title="View source">L3–L7</a> · step 021 of hello-playbook · on <a href="https://github.com/abstecker/hello-playbook/tree/try/shout" title="Browse branch">try/shout</a> · <a href="https://github.com/abstecker/hello-playbook/commit/step-021-shout" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-021-shout" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-rust">/// Build a greeting for `name`, ignoring stray whitespace — loudly.
+#[must_use]
+pub fn greet(name: &amp;str) -&gt; String {
+    format!("HELLO, {}!", name.trim().to_uppercase())
+}</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-021-shout</code></span></p>
+<p><code>branch="try/shout"</code> puts this commit on a branch of its own, forked from the
+last commit on <code>main</code>. The tests from chapter 4 still expect <code>Hello, world!</code>,
+so the step claims <code>expect="test_fail"</code>, and <code>bower verify</code> holds it to that.</p>
+<p>The branch is never merged. It stays in the repository as a state you can
+check out and poke at:</p>
+<pre><code class="language-sh">git checkout try/shout
+cargo test
+</code></pre>
+<pre><code class="language-markdown">Louder is not better when the tests pin the exact words. Left open, on
+purpose: this is the attempt that did not work.
+</code></pre>
+<p>A <code>pr=</code> directive declares a pull request for a branch, and its fence is the
+request's description. The repository lists every one in <code>PULLS.md</code>.</p>
+<h2 id="a-feature-on-a-branch"><a class="header" href="#a-feature-on-a-branch">A feature on a branch</a></h2>
+<p><a id="step-greet-many"></a>
+<span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-022-greet-many/src/lib.rs" title="View full file">💾 <code>src/lib.rs</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-022-greet-many/src/lib.rs#L3-L13" title="View source">L3–L13</a> · step 022 of hello-playbook · on <a href="https://github.com/abstecker/hello-playbook/tree/feat/greet-many" title="Browse branch">feat/greet-many</a> · <a href="https://github.com/abstecker/hello-playbook/commit/step-022-greet-many" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-022-greet-many" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-rust">/// Build a greeting for `name`, ignoring stray whitespace.
+#[must_use]
+pub fn greet(name: &amp;str) -&gt; String {
+    format!("Hello, {}!", name.trim())
+}
+
+/// One greeting per name, in order.
+#[must_use]
+pub fn greet_all(names: &amp;[&amp;str]) -&gt; Vec&lt;String&gt; {
+    names.iter().copied().map(greet).collect()
+}</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-022-greet-many</code></span></p>
+<p>A second branch, forked from the same commit on <code>main</code>. It rewrites the same
+region the failed experiment did, and that is fine: the two branches never
+meet.</p>
+<p><a id="step-greet-many-test"></a>
+<span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-023-greet-many-test/src/lib.rs" title="View full file">💾 <code>src/lib.rs</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-023-greet-many-test/src/lib.rs#L15-L33" title="View source">L15–L33</a> · step 023 of hello-playbook · on <a href="https://github.com/abstecker/hello-playbook/tree/feat/greet-many" title="Browse branch">feat/greet-many</a> · <a href="https://github.com/abstecker/hello-playbook/commit/step-023-greet-many-test" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-023-greet-many-test" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-rust">#[cfg(test)]
+mod tests {
+    use super::{greet, greet_all};
+
+    #[test]
+    fn greet_uses_the_name() {
+        assert_eq!(greet("world"), "Hello, world!");
+    }
+
+    #[test]
+    fn greet_ignores_stray_whitespace() {
+        assert_eq!(greet("  world  "), "Hello, world!");
+    }
+
+    #[test]
+    fn greet_all_keeps_the_order() {
+        assert_eq!(greet_all(&amp;["a", "b"]), ["Hello, a!", "Hello, b!"]);
+    }
+}</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-023-greet-many-test</code></span></p>
+<pre><code class="language-markdown">Adds `greet_all`: one greeting per name, in the order given. Merged into
+`main` by a merge commit of its own.
+</code></pre>
+<p>This branch gets a pull request too. Unlike the experiment's, it does not stay
+open: the merge commit at the end of the chapter merges it.</p>
+<h2 id="meanwhile-on-main"><a class="header" href="#meanwhile-on-main">Meanwhile, on main</a></h2>
+<p><a id="step-changelog"></a>
+<span class="step-meta"><sub><a href="https://github.com/abstecker/hello-playbook/blob/step-024-changelog/CHANGELOG.md" title="View full file">💾 <code>CHANGELOG.md</code></a> · <a href="https://github.com/abstecker/hello-playbook/blob/step-024-changelog/CHANGELOG.md#L1-L5" title="View source">L1–L5</a> · step 024 of hello-playbook · <a href="https://github.com/abstecker/hello-playbook/commit/step-024-changelog" title="View diff">diff</a> · <a href="https://github.com/abstecker/hello-playbook/tree/step-024-changelog" title="Browse repo">browse</a></sub></span></p>
+<pre><code class="language-markdown"># Changelog
+
+## Unreleased
+
+- CI runs the gate on every push and every pull request.
+</code></pre>
+<p><span class="step-checkout">$&gt; <code>git checkout step-024-changelog</code></span></p>
+<p><code>main</code> moves on without the branch. This commit knows nothing about
+<code>greet_all</code>.</p>
+<h2 id="the-merge"><a class="header" href="#the-merge">The merge</a></h2>
+<p><a id="step-merge-greet-many"></a>
+<span class="step-meta"><sub>step 025 of hello-playbook · merges <a href="https://github.com/abstecker/hello-playbook/tree/feat/greet-many" title="Browse branch">feat/greet-many</a> · <a href="https://github.com/abstecker/hello-playbook/compare/step-024-changelog...step-023-greet-many-test" title="Compare">compare</a></sub></span></p>
+<p><span class="step-checkout">$&gt; <code>git checkout step-025-merge-greet-many</code></span></p>
+<p><code>merge="feat/greet-many"</code> makes this a merge commit on <code>main</code> with two parents:
+the changelog, and the branch's last commit. Bower builds it the same way every
+time, by replaying the branch's blocks over <code>main</code> as it stands. The two sides
+changed different files, so there is nothing to resolve. Had they both
+rewritten the same region, the book would stop at plan time and ask for a
+resolution on this step.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="appendix-credits"><a class="header" href="#appendix-credits">Appendix: credits</a></h1>
+<h2 id="the-cover"><a class="header" href="#the-cover">The cover</a></h2>
+<p>The photograph on the cover of this book is <em>Hello World, Brian Kernighan,
+1978</em>, from Wikimedia Commons:</p>
+<p><a href="https://commons.wikimedia.org/wiki/File:Hello_World_Brian_Kernighan_1978.jpg">https://commons.wikimedia.org/wiki/File:Hello_World_Brian_Kernighan_1978.jpg</a></p>
+<p>It is licensed under the <strong>Creative Commons Attribution-Share Alike 3.0
+Unported</strong> licence (CC BY-SA 3.0):</p>
+<p><a href="https://creativecommons.org/licenses/by-sa/3.0/deed.en">https://creativecommons.org/licenses/by-sa/3.0/deed.en</a></p>
+<p>You are free:</p>
+<ul>
+<li><strong>to share</strong> — to copy, distribute and transmit the work</li>
+<li><strong>to remix</strong> — to adapt the work</li>
+</ul>
+<p>Under the following conditions:</p>
+<ul>
+<li><strong>attribution</strong> — You must give appropriate credit, provide a link to the
+license, and indicate if changes were made. You may do so in any reasonable
+manner, but not in any way that suggests the licensor endorses you or your
+use.</li>
+<li><strong>share alike</strong> — If you remix, transform, or build upon the material, you
+must distribute your contributions under the same or compatible license as
+the original.</li>
+</ul>
+<p><strong>Changes made.</strong> The photograph was scaled and cropped to fill the lower two
+thirds of the cover. Nothing else about the image was altered. The title band
+above it is separate original artwork and is not part of the licensed work.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="appendix-figures"><a class="header" href="#appendix-figures">Appendix: figures</a></h1>
+<p>This appendix is a test bench. It draws the same two pictures several ways,
+so that every build of this book — the web page, the epub, the PDF — shows
+whether each way still works.</p>
+<p>The two pictures are:</p>
+<ul>
+<li><strong>The gate</strong> — <code>make ayce</code> and what it depends on, at chapter 2, chapter 3,
+and chapter 5. The list grows as the book does.</li>
+<li><strong>A hand-range grid</strong> — thirteen by thirteen poker starting hands, shaded by
+how often a player on the button opens them, or the big blind defends. It
+is not about Rust. It is here because it is the kind of figure the poker
+books need, and a grid is a harder test than a graph.</li>
+</ul>
+<p>On the web page a figure can respond: hover or tab to a box for its detail,
+press a chip to change the state. In the epub and the PDF every figure is a
+still picture. If a figure ever goes missing from one of them, that is this
+appendix doing its job.</p>
+<p>Each section ends with a scorecard row. The criteria are listed at the end.
+The full write-up, and the reasoning behind the choice of method, is
+<code>docs/EPIC-18_SPIKE_Figures.md</code> in the bower repository.</p>
+<h2 id="m3--the-picture-is-the-figure"><a class="header" href="#m3--the-picture-is-the-figure">M3 — the picture is the figure</a></h2>
+<p>The figure is an SVG file, drawn once and kept in the book. On the web page a
+small script swaps the picture for the same SVG inline and makes it respond;
+everywhere else, the picture is all there is.</p>
+<p><img src="figures/m3/gate-ch02.svg" alt="The gate at chapter 2: ayce depends on build" /></p>
+<p><img src="figures/m3/grid-btn.svg" alt="Hand range grid, BTN open" /></p>
+<p>On paper this section shows chapter 2 and the button's range; the other
+states are one chip away on the web page, and listed in full under M7.</p>
+<p>What paper kept, from the probe run on every M3 file (the chapter 5 gate
+shown; the others match):</p>
+<div class="table-wrapper"><table><thead><tr><th>feature</th><th>in the SVG</th><th>on paper</th></tr></thead><tbody>
+<tr><td>rounded corners</td><td>yes</td><td>kept</td></tr>
+<tr><td>centred text</td><td>yes</td><td>kept</td></tr>
+<tr><td>named font</td><td>yes</td><td>kept</td></tr>
+<tr><td>data attributes</td><td>yes</td><td>inert</td></tr>
+<tr><td>classes</td><td>yes</td><td>ignored — but every colour is also written on the shape itself, so nothing was lost</td></tr>
+<tr><td>tooltips, inline styles, CSS variables, HTML inside SVG, transparency, hidden layers</td><td>no</td><td>—</td></tr>
+</tbody></table>
+</div>
+<p>Read in a browser, the script fetches each picture from the book's own
+server. Opened straight from disk (<code>file://</code>), the browser refuses that fetch
+and the page keeps the plain pictures: still correct, just still.</p>
+<div class="table-wrapper"><table><thead><tr><th>bytes</th><th>other sites</th><th>new tools</th><th>script off</th><th>one source</th><th>paper</th><th>numbers</th><th>hover · step · chips</th><th>theme</th><th>keyboard</th><th>this book</th><th>one more state</th></tr></thead><tbody>
+<tr><td>51 KB on load (both figures' first state + 6.6 KB script and style); 99 KB with every state</td><td>none; from disk, interaction is lost, pictures stay</td><td>none</td><td>the pictures</td><td>one file per state</td><td>everything</td><td>typed</td><td>yes · yes · yes</td><td>inline yes; as a picture no</td><td>yes, but one stop per cell: 171 for this section, 717 for the page with every grid on it, a long way to Tab past</td><td>yes</td><td>16 lines: a new file, plus every existing state's list of states; the work is the layout arithmetic</td></tr>
+</tbody></table>
+</div>
+<h2 id="m4--no-script-at-all"><a class="header" href="#m4--no-script-at-all">M4 — no script at all</a></h2>
+<p>The same SVG, with a tooltip on every box and a hover rule written inside the
+file, and no script anywhere. The plan was to embed it with <code>&lt;object&gt;</code>, which
+runs an SVG's own styles and tooltips, and keep a plain picture for paper.</p>
+<p>That embed did not survive the epub. pandoc kept the <code>&lt;object&gt;</code> tag but
+packed only the plain picture's file, so the epub carried a frame pointing at
+a file that is not in the book, beside the picture. The PDF got its picture
+and the web page got the <code>&lt;object&gt;</code> with the picture hidden; the epub was not
+right. So this section uses a plain picture, and its
+hover is lost: an SVG shown as a picture runs none of its own styles and
+shows none of its tooltips. Fixing that needs bower to write a different
+embed for each target — recorded for the Figures EPIC.</p>
+<p><img src="figures/m4/gate-ch05.svg" alt="The gate at chapter 5: ayce depends on build, fmt, lint, test, audit" /></p>
+<p><img src="figures/m4/grid-bb.svg" alt="Hand range grid, BB defend" /></p>
+<p>On paper the tooltips and the hover rule are simply ignored; the picture is
+the same as M3's.</p>
+<div class="table-wrapper"><table><thead><tr><th>bytes</th><th>other sites</th><th>new tools</th><th>script off</th><th>one source</th><th>paper</th><th>numbers</th><th>hover · step · chips</th><th>theme</th><th>keyboard</th><th>this book</th><th>one more state</th></tr></thead><tbody>
+<tr><td>55 KB for the two figures shown; no script</td><td>none</td><td>node, to write the tooltips in at build time</td><td>the same pictures — there is no script</td><td>generated from M3's files</td><td>everything; tooltips and hover style ignored</td><td>typed</td><td>no · no · no as a picture (hover only, with a per-target embed)</td><td>no</td><td>no — a picture has nothing to focus</td><td>yes</td><td>none beyond M3's: it is derived from them</td></tr>
+</tbody></table>
+</div>
+<h2 id="m7--drawn-by-rust-on-paper-and-in-the-browser"><a class="header" href="#m7--drawn-by-rust-on-paper-and-in-the-browser">M7 — drawn by Rust, on paper and in the browser</a></h2>
+<p>The picture is drawn by a small Rust crate from the same data the other
+sections use. The build runs it once to write the files paper reads; the web
+page runs the same code, compiled to WebAssembly, every time a chip or a hover
+asks for a new picture. Because one function draws both, the screen and the
+paper cannot disagree — a check in the build proves it on every change.</p>
+<p>Every state is listed here, so paper carries all of them:</p>
+<p><img src="figures/m7/gate-ch02.svg" alt="The gate at chapter 2" /></p>
+<p><img src="figures/m7/gate-ch03.svg" alt="The gate at chapter 3" /></p>
+<p><img src="figures/m7/gate-ch05.svg" alt="The gate at chapter 5" /></p>
+<p><img src="figures/m7/grid-btn.svg" alt="Hand range grid, BTN open" /></p>
+<p><img src="figures/m7/grid-bb.svg" alt="Hand range grid, BB defend" /></p>
+<p>The WebAssembly that redraws them is 105 KB — a twentieth of the 2.2 MB a
+whole poker engine compiles to — and the drawings it makes in the browser are
+checked, character for character, against the files paper uses. On paper
+every file matched M3's exactly: they are the same bytes.</p>
+<div class="table-wrapper"><table><thead><tr><th>bytes</th><th>other sites</th><th>new tools</th><th>script off</th><th>one source</th><th>paper</th><th>numbers</th><th>hover · step · chips</th><th>theme</th><th>keyboard</th><th>this book</th><th>one more state</th></tr></thead><tbody>
+<tr><td>226 KB for the section, 105 KB of it the WebAssembly</td><td>none; from disk, interaction is lost, pictures stay</td><td>wasm-pack and the wasm target (to build); node (to check)</td><td>the pictures</td><td>one function draws both, checked on every change</td><td>everything</td><td>typed — the engine-backed version is measured off-book</td><td>yes · yes · yes</td><td>inline yes; as a picture no</td><td>yes, and focus survives every redraw; one stop per cell, as M3</td><td>yes</td><td>2 lines of data, no code</td></tr>
+</tbody></table>
+</div>
+<h2 id="m2--a-custom-element"><a class="header" href="#m2--a-custom-element">M2 — a custom element</a></h2>
+<p>A custom HTML element draws the figure with ordinary page boxes, the way the
+design tool's panel did. The same file can also write the figure out as an
+SVG, which is what paper gets — two drawings of one figure, kept in step only
+by being in the same file.</p>
+<p><pk-gate src="figures/data/gate.json" state="ch03"></pk-gate></p>
+<p><img src="figures/m2/gate-ch03.svg" alt="The gate at chapter 3" /></p>
+<p><pk-range-grid src="figures/data/ranges.json" state="bb"></pk-range-grid></p>
+<p><img src="figures/m2/grid-bb.svg" alt="Hand range grid, BB defend" /></p>
+<p>Its SVG output matched M3's files byte for byte — but only because both were
+written to match; nothing ties the boxes on screen to the file on paper. In
+the epub the element is an empty tag a reader ignores, and the picture
+shows once.</p>
+<div class="table-wrapper"><table><thead><tr><th>bytes</th><th>other sites</th><th>new tools</th><th>script off</th><th>one source</th><th>paper</th><th>numbers</th><th>hover · step · chips</th><th>theme</th><th>keyboard</th><th>this book</th><th>one more state</th></tr></thead><tbody>
+<tr><td>65 KB (7 KB element, the two pictures, the data)</td><td>none; from disk, the element stays empty and the pictures show</td><td>node, to write the pictures at build time</td><td>the pictures</td><td>two renderers in one file</td><td>everything</td><td>typed</td><td>yes · yes · yes</td><td>gate yes; grid colours fixed</td><td>yes</td><td>yes</td><td>2 lines of data, no code</td></tr>
+</tbody></table>
+</div>
+<h2 id="m5--a-text-diagram"><a class="header" href="#m5--a-text-diagram">M5 — a text diagram</a></h2>
+<p>The figure is a few lines of text in a diagram language, Mermaid, compiled to
+a picture when the figures are rebuilt. The whole of the chapter 5 gate is
+six lines. It is the least work to write and the least to look at: no hover,
+no chips, the same picture everywhere.</p>
+<p><img src="figures/m5/gate-ch05.svg" alt="The gate at chapter 5, drawn by Mermaid" /></p>
+<p><img src="figures/m5/grid-btn.svg" alt="Hand range grid, BTN open, drawn by Mermaid" /></p>
+<p>Two findings. First, Mermaid's default puts every label inside a piece of
+HTML embedded in the SVG, which the PDF drops: paper got five empty boxes.
+Turning that off (plain SVG text) brought the labels back. Second, the grid
+can be drawn — as a "block" diagram — but its text is 340 lines, one block and
+one colour per hand. Nobody writes that by hand, so the build generates it
+from the same data the other sections use, and the "text diagram" for a grid
+is a generated file like any other.</p>
+<p>Mermaid's pictures also break the rules the other sections' pictures keep:
+they carry ids, transparency and fractional coordinates, and none of the
+data attributes a script needs, so nothing could ever make them respond.</p>
+<div class="table-wrapper"><table><thead><tr><th>bytes</th><th>other sites</th><th>new tools</th><th>script off</th><th>one source</th><th>paper</th><th>numbers</th><th>hover · step · chips</th><th>theme</th><th>keyboard</th><th>this book</th><th>one more state</th></tr></thead><tbody>
+<tr><td>131 KB for the two pictures shown; the grid alone is 116 KB, almost three times M3's</td><td>none</td><td>mmdc, which brings its own Chromium; node</td><td>the pictures</td><td>one text file per gate state; the grid's text is generated</td><td>everything, once labels are plain text; nothing but boxes with Mermaid's default</td><td>typed</td><td>no · no · no</td><td>no</td><td>no</td><td>yes</td><td>7 lines: copy the chapter 5 file, add one</td></tr>
+</tbody></table>
+</div>
+<h2 id="not-carried-m1-and-m6"><a class="header" href="#not-carried-m1-and-m6">Not carried: M1 and M6</a></h2>
+<p><strong>M1 — the design tool's export, as is.</strong> Dropped into the page as a frame,
+it works — until the reader is offline. It fetches React and its fonts from
+other sites every time it is opened, and paper gets a screenshot that nothing
+keeps in step with the page.</p>
+<div class="table-wrapper"><table><thead><tr><th>bytes</th><th>other sites</th><th>new tools</th><th>script off</th><th>one source</th><th>paper</th><th>numbers</th><th>hover · step · chips</th><th>theme</th><th>keyboard</th><th>this book</th><th>one more state</th></tr></thead><tbody>
+<tr><td>112 KB in the book, plus 248 KB from other sites on every open</td><td>unpkg (React), Google Fonts; offline, an empty frame</td><td>none to show it; a browser driver for the screenshot</td><td>the layout with its template text showing</td><td>one export, made in the design tool</td><td>a screenshot, kept everywhere, a millimetre-high label on a PDF page, and out of date the day the export changes</td><td>typed</td><td>yes · yes · yes, inside the frame</td><td>its own four, not the book's</td><td>buttons yes, cells no</td><td>cannot: reads from other sites at read time</td><td>none to add: the library has no gate</td></tr>
+</tbody></table>
+</div>
+<p><strong>M6 — a poker engine in the page.</strong> The hand counts on the grid could come
+from a real poker library compiled to WebAssembly, instead of being typed in.
+It works, and it costs 275 KB per page against 105 KB for drawing alone. This
+book teaches a Rust foundation, not poker, so it carries no engine.</p>
+<p>It also turned out to be wrong: the engine counts no combinations at all for
+four-deuce, suited or not. Nothing in the picture showed it. A test comparing
+the engine's numbers with the typed ones did, and the typed ones were right.</p>
+<div class="table-wrapper"><table><thead><tr><th>bytes</th><th>other sites</th><th>new tools</th><th>script off</th><th>one source</th><th>paper</th><th>numbers</th><th>hover · step · chips</th><th>theme</th><th>keyboard</th><th>this book</th><th>one more state</th></tr></thead><tbody>
+<tr><td>286 KB, 275 KB of it WebAssembly; the engine alone adds 169 KB</td><td>none; from a file, nothing</td><td>wasm-pack, the wasm target, the engine</td><td>nothing: script draws the whole grid</td><td>two renderers: script for the screen, Rust for paper</td><td>none of its own</td><td>from the engine — wrong for 2 hands of 169</td><td>tooltip · no · views</td><td>no</td><td>buttons yes, cells no</td><td>cannot: no engine, by rule</td><td>none to add: it draws the grid only</td></tr>
+</tbody></table>
+</div>
+<h2 id="the-scorecard"><a class="header" href="#the-scorecard">The scorecard</a></h2>
+<div class="table-wrapper"><table><thead><tr><th></th><th>C1 bytes</th><th>C2 network</th><th>C3 tools</th><th>C4 script off</th><th>C5 one source</th><th>C6 paper</th><th>C7 truth</th><th>C8 hover/step/chips</th><th>C9 theme</th><th>C10 keyboard</th><th>C11 sample book</th><th>C12 effort</th></tr></thead><tbody>
+<tr><td>M1 iframe (off-book)</td><td>112 KB + 248 KB fetched per open</td><td>unpkg, Google Fonts; offline: empty frame</td><td>none (Playwright for the screenshot)</td><td>template text (<code>{{ … }}</code>)</td><td>one export, from the design tool</td><td>a screenshot: kept, 244 ppi, never in step</td><td>typed</td><td>yes · yes · yes (in frame)</td><td>its own four, not mdBook's</td><td>18 buttons yes, 127 cells no</td><td>cannot (other sites at read time)</td><td>n/a (no gate in the library)</td></tr>
+<tr><td>M2 custom element</td><td>65 KB (7 KB element)</td><td>none (file://: images only)</td><td>node (build only)</td><td>images</td><td>two renderers in one file</td><td>nothing lost</td><td>typed</td><td>yes · yes · yes</td><td>gate yes, grid fixed</td><td>yes</td><td>yes</td><td>2 data lines, 0 code</td></tr>
+<tr><td>M3 SVG + upgrade</td><td>51 KB load / 99 KB all states</td><td>none (file://: static only)</td><td>none</td><td>images</td><td>one file per state</td><td>nothing lost</td><td>typed</td><td>yes · yes · yes</td><td>inline yes, img no</td><td>yes, but one stop per cell: 171 here, 717 Tab stops on the whole page</td><td>yes</td><td>16 lines, layout by hand</td></tr>
+<tr><td>M4 no script</td><td>55 KB, no script</td><td>none</td><td>node (build only)</td><td>same pictures</td><td>generated from M3</td><td>nothing lost (tooltips, style ignored)</td><td>typed</td><td>no · no · no (hover needs a per-target embed)</td><td>no</td><td>no</td><td>yes</td><td>0 beyond M3</td></tr>
+<tr><td>M5 Mermaid</td><td>131 KB (grid 116 KB)</td><td>none</td><td>mmdc (+ its Chromium), node</td><td>images</td><td>one .mmd per gate state; grid text generated; breaks the SVG contract (ids, opacity, no data-node/data-hand)</td><td>nothing lost with plain-text labels; all labels lost by default</td><td>typed</td><td>no · no · no</td><td>no</td><td>no</td><td>yes</td><td>7 lines (1 new)</td></tr>
+<tr><td>M6 wasm + JS draws (off-book)</td><td>286 KB (wasm 275 KB; pkcore adds 169 KB raw / 43 KB gz over M7)</td><td>none (file://: nothing)</td><td>wasm-pack + wasm target; pkcore</td><td>nothing</td><td>two renderers (JS screen, Rust paper)</td><td>none of its own</td><td>engine — wrong on 2/169 (42s, 42o: pkcore 0.15 gap)</td><td>tooltip · no · views</td><td>no</td><td>buttons yes, cells no</td><td>cannot (no engine, by rule)</td><td>n/a (grid only)</td></tr>
+<tr><td>M7 Rust draws SVG</td><td>226 KB section (wasm 105 KB)</td><td>none (file://: static only)</td><td>wasm-pack + wasm target; node to check</td><td>images</td><td>one function, checked (check-m7)</td><td>nothing lost (= M3 bytes)</td><td>typed (pkcore off-book)</td><td>yes · yes · yes</td><td>inline yes, img no</td><td>yes, focus survives redraw; one stop per cell, as M3</td><td>yes</td><td>2 data lines, 0 code</td></tr>
+</tbody></table>
+</div>
+<p><strong>C1</strong> bytes the figure adds to the page · <strong>C2</strong> other sites contacted while
+reading · <strong>C3</strong> tools added to build the book · <strong>C4</strong> what shows with
+JavaScript off · <strong>C5</strong> whether the web and paper pictures can drift ·
+<strong>C6</strong> what paper lost · <strong>C7</strong> whether the numbers are computed or typed ·
+<strong>C8</strong> hover · step · chips · <strong>C9</strong> follows the light/dark theme ·
+<strong>C10</strong> every hover reachable by keyboard · <strong>C11</strong> carried by this book
+without a poker engine · <strong>C12</strong> lines and minutes to add one more state.</p>
+<p>Where a method's answer differs between the gate and the grid, the cell holds
+the worse one and the method's section holds both.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="theme/figures.js"></script>
+        <script src="theme/pk-elements.js"></script>
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+
+    </div>
+    </body>
+</html>
