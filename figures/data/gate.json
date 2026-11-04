@@ -1,0 +1,11 @@
+{
+  "root": { "id": "ayce", "detail": "make ayce — all your code, evaluated" },
+  "nodes": [
+    { "id": "build", "detail": "cargo build --workspace", "from": "ch02" },
+    { "id": "fmt", "detail": "cargo fmt --all --check", "from": "ch03" },
+    { "id": "lint", "detail": "cargo clippy --workspace --all-targets -- -D warnings", "from": "ch03" },
+    { "id": "test", "detail": "cargo test --workspace", "from": "ch05" },
+    { "id": "audit", "detail": "./bin/security-scan", "from": "ch05" }
+  ],
+  "states": ["ch02", "ch03", "ch05"]
+}

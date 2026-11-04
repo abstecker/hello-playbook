@@ -1,0 +1,678 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 388 388" width="388" height="388" class="pk-figure" data-figure="grid" data-state="btn" data-states="btn bb" role="img" aria-label="Hand range grid, BTN open">
+  <g class="cell" data-hand="AA" data-combos="6" data-weight="1">
+    <rect x="0" y="0" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="14" y="18" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">AA</text>
+  </g>
+  <g class="cell" data-hand="AKs" data-combos="4" data-weight="1">
+    <rect x="30" y="0" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="44" y="18" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">AKs</text>
+  </g>
+  <g class="cell" data-hand="AQs" data-combos="4" data-weight="1">
+    <rect x="60" y="0" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="74" y="18" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">AQs</text>
+  </g>
+  <g class="cell" data-hand="AJs" data-combos="4" data-weight="1">
+    <rect x="90" y="0" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="104" y="18" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">AJs</text>
+  </g>
+  <g class="cell" data-hand="ATs" data-combos="4" data-weight="1">
+    <rect x="120" y="0" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="134" y="18" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">ATs</text>
+  </g>
+  <g class="cell" data-hand="A9s" data-combos="4" data-weight="1">
+    <rect x="150" y="0" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="164" y="18" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">A9s</text>
+  </g>
+  <g class="cell" data-hand="A8s" data-combos="4" data-weight="1">
+    <rect x="180" y="0" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="194" y="18" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">A8s</text>
+  </g>
+  <g class="cell" data-hand="A7s" data-combos="4" data-weight="1">
+    <rect x="210" y="0" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="224" y="18" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">A7s</text>
+  </g>
+  <g class="cell" data-hand="A6s" data-combos="4" data-weight="1">
+    <rect x="240" y="0" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="254" y="18" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">A6s</text>
+  </g>
+  <g class="cell" data-hand="A5s" data-combos="4" data-weight="1">
+    <rect x="270" y="0" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="284" y="18" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">A5s</text>
+  </g>
+  <g class="cell" data-hand="A4s" data-combos="4" data-weight="1">
+    <rect x="300" y="0" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="314" y="18" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">A4s</text>
+  </g>
+  <g class="cell" data-hand="A3s" data-combos="4" data-weight="1">
+    <rect x="330" y="0" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="344" y="18" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">A3s</text>
+  </g>
+  <g class="cell" data-hand="A2s" data-combos="4" data-weight="1">
+    <rect x="360" y="0" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="374" y="18" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">A2s</text>
+  </g>
+  <g class="cell" data-hand="AKo" data-combos="12" data-weight="1">
+    <rect x="0" y="30" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="14" y="48" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">AKo</text>
+  </g>
+  <g class="cell" data-hand="KK" data-combos="6" data-weight="1">
+    <rect x="30" y="30" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="44" y="48" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">KK</text>
+  </g>
+  <g class="cell" data-hand="KQs" data-combos="4" data-weight="1">
+    <rect x="60" y="30" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="74" y="48" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">KQs</text>
+  </g>
+  <g class="cell" data-hand="KJs" data-combos="4" data-weight="1">
+    <rect x="90" y="30" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="104" y="48" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">KJs</text>
+  </g>
+  <g class="cell" data-hand="KTs" data-combos="4" data-weight="1">
+    <rect x="120" y="30" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="134" y="48" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">KTs</text>
+  </g>
+  <g class="cell" data-hand="K9s" data-combos="4" data-weight="1">
+    <rect x="150" y="30" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="164" y="48" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">K9s</text>
+  </g>
+  <g class="cell" data-hand="K8s" data-combos="4" data-weight="1">
+    <rect x="180" y="30" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="194" y="48" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">K8s</text>
+  </g>
+  <g class="cell" data-hand="K7s" data-combos="4" data-weight="1">
+    <rect x="210" y="30" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="224" y="48" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">K7s</text>
+  </g>
+  <g class="cell" data-hand="K6s" data-combos="4" data-weight="1">
+    <rect x="240" y="30" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="254" y="48" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">K6s</text>
+  </g>
+  <g class="cell" data-hand="K5s" data-combos="4" data-weight="1">
+    <rect x="270" y="30" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="284" y="48" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">K5s</text>
+  </g>
+  <g class="cell" data-hand="K4s" data-combos="4" data-weight="1">
+    <rect x="300" y="30" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="314" y="48" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">K4s</text>
+  </g>
+  <g class="cell" data-hand="K3s" data-combos="4" data-weight="1">
+    <rect x="330" y="30" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="344" y="48" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">K3s</text>
+  </g>
+  <g class="cell" data-hand="K2s" data-combos="4" data-weight="1">
+    <rect x="360" y="30" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="374" y="48" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">K2s</text>
+  </g>
+  <g class="cell" data-hand="AQo" data-combos="12" data-weight="1">
+    <rect x="0" y="60" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="14" y="78" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">AQo</text>
+  </g>
+  <g class="cell" data-hand="KQo" data-combos="12" data-weight="1">
+    <rect x="30" y="60" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="44" y="78" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">KQo</text>
+  </g>
+  <g class="cell" data-hand="QQ" data-combos="6" data-weight="1">
+    <rect x="60" y="60" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="74" y="78" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">QQ</text>
+  </g>
+  <g class="cell" data-hand="QJs" data-combos="4" data-weight="1">
+    <rect x="90" y="60" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="104" y="78" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">QJs</text>
+  </g>
+  <g class="cell" data-hand="QTs" data-combos="4" data-weight="1">
+    <rect x="120" y="60" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="134" y="78" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">QTs</text>
+  </g>
+  <g class="cell" data-hand="Q9s" data-combos="4" data-weight="1">
+    <rect x="150" y="60" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="164" y="78" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">Q9s</text>
+  </g>
+  <g class="cell" data-hand="Q8s" data-combos="4" data-weight="1">
+    <rect x="180" y="60" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="194" y="78" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">Q8s</text>
+  </g>
+  <g class="cell" data-hand="Q7s" data-combos="4" data-weight="1">
+    <rect x="210" y="60" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="224" y="78" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">Q7s</text>
+  </g>
+  <g class="cell" data-hand="Q6s" data-combos="4" data-weight="1">
+    <rect x="240" y="60" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="254" y="78" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">Q6s</text>
+  </g>
+  <g class="cell" data-hand="Q5s" data-combos="4" data-weight="1">
+    <rect x="270" y="60" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="284" y="78" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">Q5s</text>
+  </g>
+  <g class="cell" data-hand="Q4s" data-combos="4" data-weight="1">
+    <rect x="300" y="60" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="314" y="78" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">Q4s</text>
+  </g>
+  <g class="cell" data-hand="Q3s" data-combos="4" data-weight="0.5">
+    <rect x="330" y="60" width="28" height="28" rx="3" fill="#9ae6b4"/>
+    <text x="344" y="78" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">Q3s</text>
+  </g>
+  <g class="cell" data-hand="Q2s" data-combos="4" data-weight="0.5">
+    <rect x="360" y="60" width="28" height="28" rx="3" fill="#9ae6b4"/>
+    <text x="374" y="78" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">Q2s</text>
+  </g>
+  <g class="cell" data-hand="AJo" data-combos="12" data-weight="1">
+    <rect x="0" y="90" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="14" y="108" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">AJo</text>
+  </g>
+  <g class="cell" data-hand="KJo" data-combos="12" data-weight="1">
+    <rect x="30" y="90" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="44" y="108" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">KJo</text>
+  </g>
+  <g class="cell" data-hand="QJo" data-combos="12" data-weight="1">
+    <rect x="60" y="90" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="74" y="108" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">QJo</text>
+  </g>
+  <g class="cell" data-hand="JJ" data-combos="6" data-weight="1">
+    <rect x="90" y="90" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="104" y="108" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">JJ</text>
+  </g>
+  <g class="cell" data-hand="JTs" data-combos="4" data-weight="1">
+    <rect x="120" y="90" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="134" y="108" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">JTs</text>
+  </g>
+  <g class="cell" data-hand="J9s" data-combos="4" data-weight="1">
+    <rect x="150" y="90" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="164" y="108" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">J9s</text>
+  </g>
+  <g class="cell" data-hand="J8s" data-combos="4" data-weight="1">
+    <rect x="180" y="90" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="194" y="108" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">J8s</text>
+  </g>
+  <g class="cell" data-hand="J7s" data-combos="4" data-weight="1">
+    <rect x="210" y="90" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="224" y="108" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">J7s</text>
+  </g>
+  <g class="cell" data-hand="J6s" data-combos="4" data-weight="1">
+    <rect x="240" y="90" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="254" y="108" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">J6s</text>
+  </g>
+  <g class="cell" data-hand="J5s" data-combos="4" data-weight="0.5">
+    <rect x="270" y="90" width="28" height="28" rx="3" fill="#9ae6b4"/>
+    <text x="284" y="108" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">J5s</text>
+  </g>
+  <g class="cell" data-hand="J4s" data-combos="4" data-weight="0">
+    <rect x="300" y="90" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="314" y="108" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">J4s</text>
+  </g>
+  <g class="cell" data-hand="J3s" data-combos="4" data-weight="0">
+    <rect x="330" y="90" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="344" y="108" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">J3s</text>
+  </g>
+  <g class="cell" data-hand="J2s" data-combos="4" data-weight="0">
+    <rect x="360" y="90" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="374" y="108" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">J2s</text>
+  </g>
+  <g class="cell" data-hand="ATo" data-combos="12" data-weight="1">
+    <rect x="0" y="120" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="14" y="138" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">ATo</text>
+  </g>
+  <g class="cell" data-hand="KTo" data-combos="12" data-weight="1">
+    <rect x="30" y="120" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="44" y="138" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">KTo</text>
+  </g>
+  <g class="cell" data-hand="QTo" data-combos="12" data-weight="1">
+    <rect x="60" y="120" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="74" y="138" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">QTo</text>
+  </g>
+  <g class="cell" data-hand="JTo" data-combos="12" data-weight="1">
+    <rect x="90" y="120" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="104" y="138" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">JTo</text>
+  </g>
+  <g class="cell" data-hand="TT" data-combos="6" data-weight="1">
+    <rect x="120" y="120" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="134" y="138" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">TT</text>
+  </g>
+  <g class="cell" data-hand="T9s" data-combos="4" data-weight="1">
+    <rect x="150" y="120" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="164" y="138" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">T9s</text>
+  </g>
+  <g class="cell" data-hand="T8s" data-combos="4" data-weight="1">
+    <rect x="180" y="120" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="194" y="138" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">T8s</text>
+  </g>
+  <g class="cell" data-hand="T7s" data-combos="4" data-weight="1">
+    <rect x="210" y="120" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="224" y="138" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">T7s</text>
+  </g>
+  <g class="cell" data-hand="T6s" data-combos="4" data-weight="1">
+    <rect x="240" y="120" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="254" y="138" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">T6s</text>
+  </g>
+  <g class="cell" data-hand="T5s" data-combos="4" data-weight="0.5">
+    <rect x="270" y="120" width="28" height="28" rx="3" fill="#9ae6b4"/>
+    <text x="284" y="138" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">T5s</text>
+  </g>
+  <g class="cell" data-hand="T4s" data-combos="4" data-weight="0">
+    <rect x="300" y="120" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="314" y="138" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">T4s</text>
+  </g>
+  <g class="cell" data-hand="T3s" data-combos="4" data-weight="0">
+    <rect x="330" y="120" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="344" y="138" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">T3s</text>
+  </g>
+  <g class="cell" data-hand="T2s" data-combos="4" data-weight="0">
+    <rect x="360" y="120" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="374" y="138" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">T2s</text>
+  </g>
+  <g class="cell" data-hand="A9o" data-combos="12" data-weight="1">
+    <rect x="0" y="150" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="14" y="168" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">A9o</text>
+  </g>
+  <g class="cell" data-hand="K9o" data-combos="12" data-weight="1">
+    <rect x="30" y="150" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="44" y="168" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">K9o</text>
+  </g>
+  <g class="cell" data-hand="Q9o" data-combos="12" data-weight="1">
+    <rect x="60" y="150" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="74" y="168" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">Q9o</text>
+  </g>
+  <g class="cell" data-hand="J9o" data-combos="12" data-weight="1">
+    <rect x="90" y="150" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="104" y="168" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">J9o</text>
+  </g>
+  <g class="cell" data-hand="T9o" data-combos="12" data-weight="1">
+    <rect x="120" y="150" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="134" y="168" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">T9o</text>
+  </g>
+  <g class="cell" data-hand="99" data-combos="6" data-weight="1">
+    <rect x="150" y="150" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="164" y="168" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">99</text>
+  </g>
+  <g class="cell" data-hand="98s" data-combos="4" data-weight="1">
+    <rect x="180" y="150" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="194" y="168" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">98s</text>
+  </g>
+  <g class="cell" data-hand="97s" data-combos="4" data-weight="1">
+    <rect x="210" y="150" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="224" y="168" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">97s</text>
+  </g>
+  <g class="cell" data-hand="96s" data-combos="4" data-weight="1">
+    <rect x="240" y="150" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="254" y="168" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">96s</text>
+  </g>
+  <g class="cell" data-hand="95s" data-combos="4" data-weight="0.5">
+    <rect x="270" y="150" width="28" height="28" rx="3" fill="#9ae6b4"/>
+    <text x="284" y="168" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">95s</text>
+  </g>
+  <g class="cell" data-hand="94s" data-combos="4" data-weight="0">
+    <rect x="300" y="150" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="314" y="168" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">94s</text>
+  </g>
+  <g class="cell" data-hand="93s" data-combos="4" data-weight="0">
+    <rect x="330" y="150" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="344" y="168" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">93s</text>
+  </g>
+  <g class="cell" data-hand="92s" data-combos="4" data-weight="0">
+    <rect x="360" y="150" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="374" y="168" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">92s</text>
+  </g>
+  <g class="cell" data-hand="A8o" data-combos="12" data-weight="1">
+    <rect x="0" y="180" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="14" y="198" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">A8o</text>
+  </g>
+  <g class="cell" data-hand="K8o" data-combos="12" data-weight="1">
+    <rect x="30" y="180" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="44" y="198" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">K8o</text>
+  </g>
+  <g class="cell" data-hand="Q8o" data-combos="12" data-weight="0.5">
+    <rect x="60" y="180" width="28" height="28" rx="3" fill="#9ae6b4"/>
+    <text x="74" y="198" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">Q8o</text>
+  </g>
+  <g class="cell" data-hand="J8o" data-combos="12" data-weight="0">
+    <rect x="90" y="180" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="104" y="198" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">J8o</text>
+  </g>
+  <g class="cell" data-hand="T8o" data-combos="12" data-weight="0">
+    <rect x="120" y="180" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="134" y="198" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">T8o</text>
+  </g>
+  <g class="cell" data-hand="98o" data-combos="12" data-weight="0.5">
+    <rect x="150" y="180" width="28" height="28" rx="3" fill="#9ae6b4"/>
+    <text x="164" y="198" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">98o</text>
+  </g>
+  <g class="cell" data-hand="88" data-combos="6" data-weight="1">
+    <rect x="180" y="180" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="194" y="198" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">88</text>
+  </g>
+  <g class="cell" data-hand="87s" data-combos="4" data-weight="1">
+    <rect x="210" y="180" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="224" y="198" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">87s</text>
+  </g>
+  <g class="cell" data-hand="86s" data-combos="4" data-weight="1">
+    <rect x="240" y="180" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="254" y="198" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">86s</text>
+  </g>
+  <g class="cell" data-hand="85s" data-combos="4" data-weight="1">
+    <rect x="270" y="180" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="284" y="198" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">85s</text>
+  </g>
+  <g class="cell" data-hand="84s" data-combos="4" data-weight="0">
+    <rect x="300" y="180" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="314" y="198" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">84s</text>
+  </g>
+  <g class="cell" data-hand="83s" data-combos="4" data-weight="0">
+    <rect x="330" y="180" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="344" y="198" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">83s</text>
+  </g>
+  <g class="cell" data-hand="82s" data-combos="4" data-weight="0">
+    <rect x="360" y="180" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="374" y="198" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">82s</text>
+  </g>
+  <g class="cell" data-hand="A7o" data-combos="12" data-weight="1">
+    <rect x="0" y="210" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="14" y="228" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">A7o</text>
+  </g>
+  <g class="cell" data-hand="K7o" data-combos="12" data-weight="0.5">
+    <rect x="30" y="210" width="28" height="28" rx="3" fill="#9ae6b4"/>
+    <text x="44" y="228" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">K7o</text>
+  </g>
+  <g class="cell" data-hand="Q7o" data-combos="12" data-weight="0">
+    <rect x="60" y="210" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="74" y="228" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">Q7o</text>
+  </g>
+  <g class="cell" data-hand="J7o" data-combos="12" data-weight="0">
+    <rect x="90" y="210" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="104" y="228" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">J7o</text>
+  </g>
+  <g class="cell" data-hand="T7o" data-combos="12" data-weight="0">
+    <rect x="120" y="210" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="134" y="228" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">T7o</text>
+  </g>
+  <g class="cell" data-hand="97o" data-combos="12" data-weight="0">
+    <rect x="150" y="210" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="164" y="228" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">97o</text>
+  </g>
+  <g class="cell" data-hand="87o" data-combos="12" data-weight="0">
+    <rect x="180" y="210" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="194" y="228" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">87o</text>
+  </g>
+  <g class="cell" data-hand="77" data-combos="6" data-weight="1">
+    <rect x="210" y="210" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="224" y="228" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">77</text>
+  </g>
+  <g class="cell" data-hand="76s" data-combos="4" data-weight="1">
+    <rect x="240" y="210" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="254" y="228" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">76s</text>
+  </g>
+  <g class="cell" data-hand="75s" data-combos="4" data-weight="1">
+    <rect x="270" y="210" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="284" y="228" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">75s</text>
+  </g>
+  <g class="cell" data-hand="74s" data-combos="4" data-weight="1">
+    <rect x="300" y="210" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="314" y="228" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">74s</text>
+  </g>
+  <g class="cell" data-hand="73s" data-combos="4" data-weight="0">
+    <rect x="330" y="210" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="344" y="228" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">73s</text>
+  </g>
+  <g class="cell" data-hand="72s" data-combos="4" data-weight="0">
+    <rect x="360" y="210" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="374" y="228" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">72s</text>
+  </g>
+  <g class="cell" data-hand="A6o" data-combos="12" data-weight="1">
+    <rect x="0" y="240" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="14" y="258" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">A6o</text>
+  </g>
+  <g class="cell" data-hand="K6o" data-combos="12" data-weight="0">
+    <rect x="30" y="240" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="44" y="258" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">K6o</text>
+  </g>
+  <g class="cell" data-hand="Q6o" data-combos="12" data-weight="0">
+    <rect x="60" y="240" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="74" y="258" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">Q6o</text>
+  </g>
+  <g class="cell" data-hand="J6o" data-combos="12" data-weight="0">
+    <rect x="90" y="240" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="104" y="258" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">J6o</text>
+  </g>
+  <g class="cell" data-hand="T6o" data-combos="12" data-weight="0">
+    <rect x="120" y="240" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="134" y="258" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">T6o</text>
+  </g>
+  <g class="cell" data-hand="96o" data-combos="12" data-weight="0">
+    <rect x="150" y="240" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="164" y="258" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">96o</text>
+  </g>
+  <g class="cell" data-hand="86o" data-combos="12" data-weight="0">
+    <rect x="180" y="240" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="194" y="258" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">86o</text>
+  </g>
+  <g class="cell" data-hand="76o" data-combos="12" data-weight="0">
+    <rect x="210" y="240" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="224" y="258" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">76o</text>
+  </g>
+  <g class="cell" data-hand="66" data-combos="6" data-weight="1">
+    <rect x="240" y="240" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="254" y="258" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">66</text>
+  </g>
+  <g class="cell" data-hand="65s" data-combos="4" data-weight="1">
+    <rect x="270" y="240" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="284" y="258" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">65s</text>
+  </g>
+  <g class="cell" data-hand="64s" data-combos="4" data-weight="1">
+    <rect x="300" y="240" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="314" y="258" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">64s</text>
+  </g>
+  <g class="cell" data-hand="63s" data-combos="4" data-weight="0">
+    <rect x="330" y="240" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="344" y="258" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">63s</text>
+  </g>
+  <g class="cell" data-hand="62s" data-combos="4" data-weight="0">
+    <rect x="360" y="240" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="374" y="258" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">62s</text>
+  </g>
+  <g class="cell" data-hand="A5o" data-combos="12" data-weight="1">
+    <rect x="0" y="270" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="14" y="288" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">A5o</text>
+  </g>
+  <g class="cell" data-hand="K5o" data-combos="12" data-weight="0">
+    <rect x="30" y="270" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="44" y="288" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">K5o</text>
+  </g>
+  <g class="cell" data-hand="Q5o" data-combos="12" data-weight="0">
+    <rect x="60" y="270" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="74" y="288" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">Q5o</text>
+  </g>
+  <g class="cell" data-hand="J5o" data-combos="12" data-weight="0">
+    <rect x="90" y="270" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="104" y="288" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">J5o</text>
+  </g>
+  <g class="cell" data-hand="T5o" data-combos="12" data-weight="0">
+    <rect x="120" y="270" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="134" y="288" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">T5o</text>
+  </g>
+  <g class="cell" data-hand="95o" data-combos="12" data-weight="0">
+    <rect x="150" y="270" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="164" y="288" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">95o</text>
+  </g>
+  <g class="cell" data-hand="85o" data-combos="12" data-weight="0">
+    <rect x="180" y="270" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="194" y="288" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">85o</text>
+  </g>
+  <g class="cell" data-hand="75o" data-combos="12" data-weight="0">
+    <rect x="210" y="270" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="224" y="288" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">75o</text>
+  </g>
+  <g class="cell" data-hand="65o" data-combos="12" data-weight="0">
+    <rect x="240" y="270" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="254" y="288" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">65o</text>
+  </g>
+  <g class="cell" data-hand="55" data-combos="6" data-weight="1">
+    <rect x="270" y="270" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="284" y="288" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">55</text>
+  </g>
+  <g class="cell" data-hand="54s" data-combos="4" data-weight="1">
+    <rect x="300" y="270" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="314" y="288" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">54s</text>
+  </g>
+  <g class="cell" data-hand="53s" data-combos="4" data-weight="0.5">
+    <rect x="330" y="270" width="28" height="28" rx="3" fill="#9ae6b4"/>
+    <text x="344" y="288" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">53s</text>
+  </g>
+  <g class="cell" data-hand="52s" data-combos="4" data-weight="0">
+    <rect x="360" y="270" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="374" y="288" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">52s</text>
+  </g>
+  <g class="cell" data-hand="A4o" data-combos="12" data-weight="1">
+    <rect x="0" y="300" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="14" y="318" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">A4o</text>
+  </g>
+  <g class="cell" data-hand="K4o" data-combos="12" data-weight="0">
+    <rect x="30" y="300" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="44" y="318" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">K4o</text>
+  </g>
+  <g class="cell" data-hand="Q4o" data-combos="12" data-weight="0">
+    <rect x="60" y="300" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="74" y="318" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">Q4o</text>
+  </g>
+  <g class="cell" data-hand="J4o" data-combos="12" data-weight="0">
+    <rect x="90" y="300" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="104" y="318" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">J4o</text>
+  </g>
+  <g class="cell" data-hand="T4o" data-combos="12" data-weight="0">
+    <rect x="120" y="300" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="134" y="318" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">T4o</text>
+  </g>
+  <g class="cell" data-hand="94o" data-combos="12" data-weight="0">
+    <rect x="150" y="300" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="164" y="318" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">94o</text>
+  </g>
+  <g class="cell" data-hand="84o" data-combos="12" data-weight="0">
+    <rect x="180" y="300" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="194" y="318" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">84o</text>
+  </g>
+  <g class="cell" data-hand="74o" data-combos="12" data-weight="0">
+    <rect x="210" y="300" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="224" y="318" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">74o</text>
+  </g>
+  <g class="cell" data-hand="64o" data-combos="12" data-weight="0">
+    <rect x="240" y="300" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="254" y="318" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">64o</text>
+  </g>
+  <g class="cell" data-hand="54o" data-combos="12" data-weight="0">
+    <rect x="270" y="300" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="284" y="318" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">54o</text>
+  </g>
+  <g class="cell" data-hand="44" data-combos="6" data-weight="1">
+    <rect x="300" y="300" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="314" y="318" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">44</text>
+  </g>
+  <g class="cell" data-hand="43s" data-combos="4" data-weight="1">
+    <rect x="330" y="300" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="344" y="318" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">43s</text>
+  </g>
+  <g class="cell" data-hand="42s" data-combos="4" data-weight="0">
+    <rect x="360" y="300" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="374" y="318" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">42s</text>
+  </g>
+  <g class="cell" data-hand="A3o" data-combos="12" data-weight="0.5">
+    <rect x="0" y="330" width="28" height="28" rx="3" fill="#9ae6b4"/>
+    <text x="14" y="348" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">A3o</text>
+  </g>
+  <g class="cell" data-hand="K3o" data-combos="12" data-weight="0">
+    <rect x="30" y="330" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="44" y="348" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">K3o</text>
+  </g>
+  <g class="cell" data-hand="Q3o" data-combos="12" data-weight="0">
+    <rect x="60" y="330" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="74" y="348" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">Q3o</text>
+  </g>
+  <g class="cell" data-hand="J3o" data-combos="12" data-weight="0">
+    <rect x="90" y="330" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="104" y="348" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">J3o</text>
+  </g>
+  <g class="cell" data-hand="T3o" data-combos="12" data-weight="0">
+    <rect x="120" y="330" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="134" y="348" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">T3o</text>
+  </g>
+  <g class="cell" data-hand="93o" data-combos="12" data-weight="0">
+    <rect x="150" y="330" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="164" y="348" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">93o</text>
+  </g>
+  <g class="cell" data-hand="83o" data-combos="12" data-weight="0">
+    <rect x="180" y="330" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="194" y="348" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">83o</text>
+  </g>
+  <g class="cell" data-hand="73o" data-combos="12" data-weight="0">
+    <rect x="210" y="330" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="224" y="348" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">73o</text>
+  </g>
+  <g class="cell" data-hand="63o" data-combos="12" data-weight="0">
+    <rect x="240" y="330" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="254" y="348" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">63o</text>
+  </g>
+  <g class="cell" data-hand="53o" data-combos="12" data-weight="0">
+    <rect x="270" y="330" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="284" y="348" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">53o</text>
+  </g>
+  <g class="cell" data-hand="43o" data-combos="12" data-weight="0">
+    <rect x="300" y="330" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="314" y="348" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">43o</text>
+  </g>
+  <g class="cell" data-hand="33" data-combos="6" data-weight="1">
+    <rect x="330" y="330" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="344" y="348" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">33</text>
+  </g>
+  <g class="cell" data-hand="32s" data-combos="4" data-weight="1">
+    <rect x="360" y="330" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="374" y="348" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">32s</text>
+  </g>
+  <g class="cell" data-hand="A2o" data-combos="12" data-weight="0.5">
+    <rect x="0" y="360" width="28" height="28" rx="3" fill="#9ae6b4"/>
+    <text x="14" y="378" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">A2o</text>
+  </g>
+  <g class="cell" data-hand="K2o" data-combos="12" data-weight="0">
+    <rect x="30" y="360" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="44" y="378" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">K2o</text>
+  </g>
+  <g class="cell" data-hand="Q2o" data-combos="12" data-weight="0">
+    <rect x="60" y="360" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="74" y="378" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">Q2o</text>
+  </g>
+  <g class="cell" data-hand="J2o" data-combos="12" data-weight="0">
+    <rect x="90" y="360" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="104" y="378" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">J2o</text>
+  </g>
+  <g class="cell" data-hand="T2o" data-combos="12" data-weight="0">
+    <rect x="120" y="360" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="134" y="378" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">T2o</text>
+  </g>
+  <g class="cell" data-hand="92o" data-combos="12" data-weight="0">
+    <rect x="150" y="360" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="164" y="378" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">92o</text>
+  </g>
+  <g class="cell" data-hand="82o" data-combos="12" data-weight="0">
+    <rect x="180" y="360" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="194" y="378" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">82o</text>
+  </g>
+  <g class="cell" data-hand="72o" data-combos="12" data-weight="0">
+    <rect x="210" y="360" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="224" y="378" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">72o</text>
+  </g>
+  <g class="cell" data-hand="62o" data-combos="12" data-weight="0">
+    <rect x="240" y="360" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="254" y="378" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">62o</text>
+  </g>
+  <g class="cell" data-hand="52o" data-combos="12" data-weight="0">
+    <rect x="270" y="360" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="284" y="378" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">52o</text>
+  </g>
+  <g class="cell" data-hand="42o" data-combos="12" data-weight="0">
+    <rect x="300" y="360" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="314" y="378" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">42o</text>
+  </g>
+  <g class="cell" data-hand="32o" data-combos="12" data-weight="0">
+    <rect x="330" y="360" width="28" height="28" rx="3" fill="#edf2f7"/>
+    <text x="344" y="378" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#1a202c">32o</text>
+  </g>
+  <g class="cell" data-hand="22" data-combos="6" data-weight="1">
+    <rect x="360" y="360" width="28" height="28" rx="3" fill="#2f855a"/>
+    <text x="374" y="378" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ffffff">22</text>
+  </g>
+</svg>
